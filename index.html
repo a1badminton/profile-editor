@@ -54,23 +54,21 @@
             <input type="text" class="form-control" id="birthDateInput" name="dob" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
             <label for="dob" class="form-label">Birthdate (YYYY-MM-DD)</label>
           </div>
-          <!-- adapted from thelocker.coach.ca; replaces BCAN's Male/Female -->
-          <div class="form-floating mb-3">
+          <div class="input-group form-floating mb-3">
             <select class="form-select" id="genderSelect" name="gender" required aria-label="Gender Identity">
-              <option selected disabled>Select gender identity</option>
+              <option selected disabled>Choose ...</option>
               <option value="M">Male</option>
               <option value="F">Female</option>
-              <!-- Self-identify as... -->
-              <option value="N">Non-binary/Genderqueer/Gender fluid</option>
-              <option value="2">Two-spirit</option>
+              <option value="O">Prefer to self-identify as:</option>
               <option value="-">Prefer not to answer</option>
             </select>
+            <input type="text" class="form-control" id="genderInput" name="selfIdentifyGender" disabled>
             <label for="gender" class="form-label">Gender</label>
           </div>
           <div class="form-floating mb-3">
             <input type="text" class="form-control" id="pronounsInput" name="pronouns" aria-describedby="pronounsHelp">
-            <label for="pronouns" class="form-label">Pronouns</label>
-            <div id="pronounsHelp" class="form-text">Examples: he/him/his/his/himself and she/her/her/hers/herself (Format: subject/object/possessive/possessive pronoun/reflexive)</div>
+            <label for="pronouns" class="form-label">Pronouns (subject/object/possessive/possessive pronoun/reflexive)</label>
+            <div id="pronounsHelp" class="form-text">Examples: he/him/his/his/himself and she/her/her/hers/herself</div>
           </div>
 
         </div>
