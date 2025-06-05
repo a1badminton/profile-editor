@@ -200,30 +200,14 @@
             <input type="text" class="form-control" id="websiteInput" name="website">
             <label for="website" class="form-label">Website</label>
           </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="1" id="newsletterCheckbox" name="newsletter">
-            <label class="form-check-label" for="newsletter">Receive newsletter</label>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" value="1" id="newsletterCheckbox" name="newsletter" switch>
+            <label class="form-check-label" for="newsletter">Opt-in newsletter</label>
           </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="1" id="marketingCheckbox" name="marketing">
-            <label class="form-check-label" for="marketing">Receive marketing messages</label>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" value="1" id="marketingCheckbox" name="marketing" switch>
+            <label class="form-check-label" for="marketing">Opt-in email marketing</label>
           </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="1" id="performanceCheckbox" name="performance">
-            <label class="form-check-label" for="performance">Receive performance updates</label>
-          </div>
-          <!-- lifted from thelocker.coach.ca -->
-          <fieldset>
-            <legend class="fs-6">Email Consent</legend>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="consent" id="consentRadio1" value="1">
-              <label class="form-check-label" for="consentRadio1">Yes</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="consent" id="consentRadio2" value="0" checked>
-              <label class="form-check-label" for="consentRadio2">No</label>
-            </div>
-          </fieldset>
 
         </div>
         <div class="tab-pane border p-2 fade" id="connections-tab-pane" role="tabpanel" aria-labelledby="connections-tab" tabindex="0">
