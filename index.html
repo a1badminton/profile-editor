@@ -16,27 +16,99 @@
 
     <ul class="nav nav-tabs" id="profileTab" role="tablist">
       <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="personal-tab" data-bs-toggle="tab" data-bs-target="#personal-tab-pane" type="button" role="tab" aria-controles="personal-tab-pane" aria-selected="true">Personal</button>
+        <button class="nav-link active" id="agreements-tab" data-bs-toggle="tab" data-bs-target="#agreements-tab-pane" type="button" role="tab" aria-controles="agreements-tab-pane" aria-selected="true">Agreements</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="address-tab" data-bs-toggle="tab" data-bs-target="#address-tab-pane" type="button" role="tab" aria-controles="address-tab-pane" aria-selected="false">Address</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controles="contact-tab-pane" aria-selected="false">Contact</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="Connections-tab" data-bs-toggle="tab" data-bs-target="#connections-tab-pane" type="button" role="tab" aria-controles="connections-tab-pane" aria-selected="false">Connections</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="demographics-tab" data-bs-toggle="tab" data-bs-target="#demographics-tab-pane" type="button" role="tab" aria-controles="demographics-tab-pane" aria-selected="false">Demographics</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="agreements-tab" data-bs-toggle="tab" data-bs-target="#agreements-tab-pane" type="button" role="tab" aria-controles="agreements-tab-pane" aria-selected="false">Agreements</button>
+        <button class="nav-link" id="personal-tab" data-bs-toggle="tab" data-bs-target="#personal-tab-pane" type="button" role="tab" aria-controles="personal-tab-pane" aria-selected="false">Personal Information</button>
       </li>
     </ul>
     <form>
       <div class="tab-content" id="profileContent">
-        <div class="tab-pane border p-2 fade show active" id="personal-tab-pane" role="tabpanel" aria-labelledby="personal-tab" tabindex="0">
+        <div class="tab-pane border p-2 fade show active" id="agreements-tab-pane" role="tabpanel" aria-labelledby="agreements-tab" tabindex="0">
+
+          <div class="accordion" id="membershipAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMembership" aria-expanded=true" aria-controls="collapseMembership">
+                  Membership Details
+                </button>
+              </h2>
+              <div id="collapseMembership" class="accordion-collapse collapse show" data-bs-parent="#membershipAccordion">
+                <div class="accordion-body">
+                  <p>Please be sure to read the terms &amp; conditions on the registration form, assumption of risk and waiver of claims found here: https://www.badmintonontario.ca/membership/</p>
+                  <p>Only Badminton Ontario affiliated clubs will be available for selection when registering or renewing your membership.</p>
+                  <p>If you are a competitive player at a non-Badminton Ontario affiliated club, you must register and compete as an ‘Independent’. Every Zone/District Association has an ‘Independent’ option in the clubs listing when you register in Tournament Software.</p>
+                  <p>If you are an independent competitive player who is not a member of a Badminton Ontario affiliated club, you must register and compete as an ‘Independent’. Every Zone/District Association has an ‘Independent’ option in the clubs listing when registering in Tournament Software.</p>
+                  <p>If you are not over 18, then please ask a parent or guardian for permission to continue.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- missing parental consent -->
+
+          <!-- BON rules & regulations -->
+          <h4>BADMINTON ONTARIO USER UNDERTAKING AND AGREEMENT</h4>
+
+          <p class="lead">IN CONSIDERATION OF ACCEPTANCE OF MY USE OF THIS SERVICE with Badminton Ontario, I, intending to be legally bound, do hereby, for myself, my heirs, executors and administrators, parents or guardians:</p>
+          <ol class="list-lower-roman">
+            <li>waive and release and forever discharge any and all rights and claims for damage which I may have or may hereafter accrue to me against Badminton Ontario, Badminton Canada, Badminton World Federation, any Member Club or their respective officers, agents, representatives, employees, volunteers and/or assigns for any damages which may arise out of my travelling to or participating in and returning from any badminton event, function or event;</li>
+            <li>consent and grant permission to Badminton Ontario to provide my personal and identifiable information to Badminton Canada for administration of the national membership system and other Badminton Canada managed programs;</li>
+            <li>consent and grant permission in perpetuity and for any and all purposes to Badminton Ontario, Badminton Canada, the organizers of the tournament or its or their respective officers, agents, representatives employees, volunteers and/or assigns to use (without, for greater certainty, any further consent or fee being required) any photograph, videotape or other electronic recording device of my image taken, filmed or recorded during, or in connection with my participation in any Badminton Ontario and/or Badminton Canada match, function or event, for any promotional, news or other purpose and</li>
+            <li>Badminton Ontario and/or Badminton Canada may use contact information collected from me including my name, email address, address and telephone number for the purpose of providing me with information relating to activities, events, news or Badminton Ontario and/or Badminton Canada approved 3rd party offers. I may choose to opt out of this approval at anytime and am in no way obligated to receive this information in order to participate in any event, service or undertaking provided by Badminton Ontario and/or Badminton Canada in which I am entitled to participate.</li>
+          </ol>
+          <p>Furthermore, I agree that I have read and accept the provisions, where applicable, to the <a class="link icon-link" href="https://www.badminton.ca/file/821889/?dl=1">Badminton Canada Privacy Policy <i class="bi bi-link-45deg"></i></a> as posted on the Badminton Canada Website (www.badminton.ca).</p>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="1" id="agreeCheckbox" name="agree">
+            <label class="form-check-label" for="agree">I agree to these Rules &amp; Regulations.</label>
+          </div>
+
+          <hr>
+          <!-- Pickleball Canada -->
+
+          <h4>RELEASE AGREEMENT</h4>
+
+          <p class="lead">RELEASE OF LIABILITY, WAIVER OF CLAIMS, ASSUMPTION OF RISKS AND INDEMNITY AGREEMENT(hereinafter referred to as the "Release Agreement")</p>
+
+          <p><strong>PLEASE READ CAREFULLY!</strong></p>
+          <p>This Release Agreement shall apply to all subsequent membership renewals.</p>
+
+          <p>BY SIGNING THIS DOCUMENT YOU WILL WAIVE OR GIVE UP CERTAIN LEGAL RIGHTS, INCLUDING THE RIGHT TO SUE OR CLAIM COMPENSATION FOLLOWING AN ACCIDENT</p>
+
+          <p>TO: PICKLEBALL CANADA ORGANIZATION, and its affiliated provinces and territories and its local associations and clubs, and their respective directors, officers, employees, instructors, agents, representatives, volunteers, independent contractors, subcontractors, sponsors, successors and assigns (hereinafter collectively referred to as the "Releasees").</p>
+
+          <h5>ASSUMPTION OF RISKS</h5>
+
+          <p>I am aware that participating in the sport of pickleball involves many risks, dangers and hazards including, but not limited to: collision with other persons or objects; being struck by a paddle; being hit by a ball; the risk of stroke, heart attack or other similar life threatening conditions caused by physical exertion; the risk of personal injury including, but not limited to, strains, sprains, fractures, brain injury, spinal cord injury including paraplegia or quadriplegia, or death; loss of balance or control; slips, trips and falls; negligent first aid; failure to act safely or within one’s own ability; negligence of other persons; and, NEGLIGENCE ON THE PART OF THE RELEASEES. I UNDERSTAND THAT NEGLIGENCE INCLUDES FAILURE ON THE PART OF THE RELEASEES TO TAKE REASONABLE STEPS TO SAFEGUARD OR PROTECT ME FROM THE RISKS, DANGERS AND HAZARDS REFERRED TO ABOVE. I FREELY ACCEPT AND FULLY ASSUME ALL SUCH RISKS, DANGERS AND HAZARDS AND THE POSSIBILITY OF PERSONAL INJURY, DEATH, OR PROPERTY DAMAGE OR LOSS RESULTING THEREFROM.</p>
+
+          <h5>RELEASE OF LIABILITY, WAIVER OF CLAIMS AND INDEMNITY AGREEMENT</h5>
+
+          <p>In consideration of the Releasees accepting my application for membership in the Pickleball Canada Organization and, as applicable, my affiliated province or territory and local association or club, and permitting my use of the facilities and premises provided by the Releasees (hereinafter "the premises"), I hereby agree as follows:</p>
+
+          <ol>
+            <li>TO WAIVE ANY AND ALL CLAIMS that I have or may in the future have against THE RELEASEES, and TO RELEASE THE RELEASEES from any and all liability for any loss, damage, expense or injury including death that I may suffer, or that my next of kin may suffer, as a result of my participation in the sport of pickleball including, but not limited to, my use of the premises DUE TO ANY CAUSE WHATSOEVER, INCLUDING NEGLIGENCE, BREACH OF CONTRACT, OR BREACH OF ANY STATUTORY OR OTHER DUTY OF CARE, INCLUDING ANY DUTY OF CARE OWED UNDER ANY PROVINCIAL OCCUPIERS’ LIABILITY LEGISLATION ON THE PART OF THE RELEASEES. I UNDERSTAND THAT NEGLIGENCE INCLUDES THE FAILURE ON PART OF THE RELEASEES TO TAKE REASONABLE STEPS TO SAFEGUARD OR PROTECT ME FROM THE RISKS, DANGERS AND HAZARDS REFERRED TO ABOVE.</li>
+
+            <li>TO HOLD HARMLESS AND INDEMNIFY THE RELEASEES from any and all liability for any damage to property of or personal injury to any third party, resulting from my use of or presence on the premises;</li>
+
+            <li>This Release Agreement shall be effective and binding upon my heirs, next of kin, executors, administrators, assigns and representatives, in the event of my death or incapacity;</li>
+
+            <li>This Release Agreement and any rights, duties and obligations as between the parties to this Release Agreement shall be governed by and interpreted solely in accordance with the laws of the Province of Ontario and no other jurisdiction; and</li>
+
+            <li>Any litigation involving the parties to this Release Agreement shall be brought solely within the Province of Ontario, and shall be within the exclusive jurisdiction of the Courts of the Province of Ontario.</li>
+          </ol>
+
+          <p>In entering into this Release Agreement I am not relying upon any oral or written representations or statements made by the Releasees with respect to the safety of pickleball other than what is set forth in this Agreement.</p>
+
+          <p>I HAVE READ AND UNDERSTAND THIS RELEASE AGREEMENT AND I AM AWARE THAT BY SIGNING THIS AGREEMENT I AM WAIVING CERTAIN LEGAL RIGHTS WHICH I OR MY HEIRS, NEXT OF KIN, EXECUTORS, ADMINISTRATORS, ASSIGNS AND REPRESENTATIVES MAY HAVE AGAINST THE RELEASEES.</p>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="1" id="agree2Checkbox" name="agree2">
+            <label class="form-check-label" for="agree2">I have read and agree to the above</label>
+          </div>
+
+        </div>
+        <div class="tab-pane border p-2 fade" id="personal-tab-pane" role="tabpanel" aria-labelledby="personal-tab" tabindex="0">
 
           <div class="form-floating mb-3">
             <input type="text" class="form-control" id="firstNameInput" name="fname" required>
@@ -72,8 +144,14 @@
             <div id="pronounsHelp" class="form-text">Examples: he/him/his/his/himself and she/her/her/hers/herself</div>
           </div>
 
-        </div>
-        <div class="tab-pane border p-2 fade" id="address-tab-pane" role="tabpanel" aria-labelledby="address-tab" tabindex="0">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="1" id="indigenousPeoplesCheckbox" name="indigenousPeoples">
+            <label class="form-check-label" for="indigenousPeoples">Indigenous Peoples (First Nations, Inuit, Métis)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="1" id="personWithADisabilityCheckbox" name="personWithADisabilty">
+            <label class="form-check-label" for="personWithADisability">Person with a Disability</label>
+          </div>
 
           <div class="form-floating mb-3">
             <textarea class="form-control" id="addressInput" name="address" rows="3"></textarea>
@@ -169,9 +247,6 @@
             <label for="country" class="form-label">Country</label>
           </div>
 
-        </div>
-        <div class="tab-pane border p-2 fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-
           <div class="form-floating mb-3">
             <input type="text" class="form-control" id="phoneInput" name="phone">
             <label for="phone" class="form-label">Phone</label>
@@ -189,9 +264,6 @@
             <label class="form-check-label" for="marketing">Opt-in email marketing</label>
           </div>
 
-        </div>
-        <div class="tab-pane border p-2 fade" id="connections-tab-pane" role="tabpanel" aria-labelledby="connections-tab" tabindex="0">
-
           <div class="form-floating mb-3">
             <input type="text" class="form-control" id="memberIdInput" name="memberId">
             <label for="memberId" class="form-label">BON Member ID</label>
@@ -201,102 +273,6 @@
             <label for="nccp" class="form-label">Coach NCCP Number</label>
           </div>
 
-        </div>
-        <div class="tab-pane border p-2 fade" id="demographics-tab-pane" role="tabpanel" aria-labelledby="demographics-tab" tabindex="0">
-
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="1" id="indigenousPeoplesCheckbox" name="indigenousPeoples">
-            <label class="form-check-label" for="indigenousPeoples">Indigenous Peoples (First Nations, Inuit, Métis)</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="1" id="personWithADisabilityCheckbox" name="personWithADisabilty">
-            <label class="form-check-label" for="personWithADisability">Person with a Disability</label>
-          </div>
-
-        </div>
-        <div class="tab-pane border p-2 fade" id="agreements-tab-pane" role="tabpanel" aria-labelledby="agreements-tab" tabindex="0">
-
-          <div class="accordion" id="membershipAccordion">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMembership" aria-expanded=true" aria-controls="collapseMembership">
-                  Membership Details
-                </button>
-              </h2>
-              <div id="collapseMembership" class="accordion-collapse collapse show" data-bs-parent="#membershipAccordion">
-                <div class="accordion-body">
-                  <p>Please be sure to read the terms &amp; conditions on the registration form, assumption of risk and waiver of claims found here: https://www.badmintonontario.ca/membership/</p>
-                  <p>Only Badminton Ontario affiliated clubs will be available for selection when registering or renewing your membership.</p>
-                  <p>If you are a competitive player at a non-Badminton Ontario affiliated club, you must register and compete as an ‘Independent’. Every Zone/District Association has an ‘Independent’ option in the clubs listing when you register in Tournament Software.</p>
-                  <p>If you are an independent competitive player who is not a member of a Badminton Ontario affiliated club, you must register and compete as an ‘Independent’. Every Zone/District Association has an ‘Independent’ option in the clubs listing when registering in Tournament Software.</p>
-                  <p>If you are not over 18, then please ask a parent or guardian for permission to continue.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- missing parental consent -->
-
-          <!-- BON rules & regulations -->
-          <h4>BADMINTON ONTARIO USER UNDERTAKING AND AGREEMENT</h4>
-
-          <p class="lead">IN CONSIDERATION OF ACCEPTANCE OF MY USE OF THIS SERVICE with Badminton Ontario, I, intending to be legally bound, do hereby, for myself, my heirs, executors and administrators, parents or guardians:</p>
-          <ol class="list-lower-roman">
-            <li>waive and release and forever discharge any and all rights and claims for damage which I may have or may hereafter accrue to me against Badminton Ontario, Badminton Canada, Badminton World Federation, any Member Club or their respective officers, agents, representatives, employees, volunteers and/or assigns for any damages which may arise out of my travelling to or participating in and returning from any badminton event, function or event;</li>
-            <li>consent and grant permission to Badminton Ontario to provide my personal and identifiable information to Badminton Canada for administration of the national membership system and other Badminton Canada managed programs;</li>
-            <li>consent and grant permission in perpetuity and for any and all purposes to Badminton Ontario, Badminton Canada, the organizers of the tournament or its or their respective officers, agents, representatives employees, volunteers and/or assigns to use (without, for greater certainty, any further consent or fee being required) any photograph, videotape or other electronic recording device of my image taken, filmed or recorded during, or in connection with my participation in any Badminton Ontario and/or Badminton Canada match, function or event, for any promotional, news or other purpose and</li>
-            <li>Badminton Ontario and/or Badminton Canada may use contact information collected from me including my name, email address, address and telephone number for the purpose of providing me with information relating to activities, events, news or Badminton Ontario and/or Badminton Canada approved 3rd party offers. I may choose to opt out of this approval at anytime and am in no way obligated to receive this information in order to participate in any event, service or undertaking provided by Badminton Ontario and/or Badminton Canada in which I am entitled to participate.</li>
-          </ol>
-          <p>Furthermore, I agree that I have read and accept the provisions, where applicable, to the <a class="link icon-link" href="https://www.badminton.ca/file/821889/?dl=1">Badminton Canada Privacy Policy <i class="bi bi-link-45deg"></i></a> as posted on the Badminton Canada Website (www.badminton.ca).</p>
-
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="1" id="agreeCheckbox" name="agree">
-            <label class="form-check-label" for="agree">I agree to these Rules &amp; Regulations.</label>
-          </div>            
-
-          <hr>
-          <!-- Pickleball Canada -->
-
-          <h4>RELEASE AGREEMENT</h4>
-
-          <p class="lead">RELEASE OF LIABILITY, WAIVER OF CLAIMS, ASSUMPTION OF RISKS AND INDEMNITY AGREEMENT(hereinafter referred to as the "Release Agreement")</p>
-
-          <p><strong>PLEASE READ CAREFULLY!</strong></p>
-          <p>This Release Agreement shall apply to all subsequent membership renewals.</p>
-
-          <p>BY SIGNING THIS DOCUMENT YOU WILL WAIVE OR GIVE UP CERTAIN LEGAL RIGHTS, INCLUDING THE RIGHT TO SUE OR CLAIM COMPENSATION FOLLOWING AN ACCIDENT</p>
-
-          <p>TO: PICKLEBALL CANADA ORGANIZATION, and its affiliated provinces and territories and its local associations and clubs, and their respective directors, officers, employees, instructors, agents, representatives, volunteers, independent contractors, subcontractors, sponsors, successors and assigns (hereinafter collectively referred to as the "Releasees").</p>
-
-          <h5>ASSUMPTION OF RISKS</h5>
-
-          <p>I am aware that participating in the sport of pickleball involves many risks, dangers and hazards including, but not limited to: collision with other persons or objects; being struck by a paddle; being hit by a ball; the risk of stroke, heart attack or other similar life threatening conditions caused by physical exertion; the risk of personal injury including, but not limited to, strains, sprains, fractures, brain injury, spinal cord injury including paraplegia or quadriplegia, or death; loss of balance or control; slips, trips and falls; negligent first aid; failure to act safely or within one’s own ability; negligence of other persons; and, NEGLIGENCE ON THE PART OF THE RELEASEES. I UNDERSTAND THAT NEGLIGENCE INCLUDES FAILURE ON THE PART OF THE RELEASEES TO TAKE REASONABLE STEPS TO SAFEGUARD OR PROTECT ME FROM THE RISKS, DANGERS AND HAZARDS REFERRED TO ABOVE. I FREELY ACCEPT AND FULLY ASSUME ALL SUCH RISKS, DANGERS AND HAZARDS AND THE POSSIBILITY OF PERSONAL INJURY, DEATH, OR PROPERTY DAMAGE OR LOSS RESULTING THEREFROM.</p>
-
-          <h5>RELEASE OF LIABILITY, WAIVER OF CLAIMS AND INDEMNITY AGREEMENT</h5>
-
-          <p>In consideration of the Releasees accepting my application for membership in the Pickleball Canada Organization and, as applicable, my affiliated province or territory and local association or club, and permitting my use of the facilities and premises provided by the Releasees (hereinafter "the premises"), I hereby agree as follows:</p>
-
-          <ol>
-            <li>TO WAIVE ANY AND ALL CLAIMS that I have or may in the future have against THE RELEASEES, and TO RELEASE THE RELEASEES from any and all liability for any loss, damage, expense or injury including death that I may suffer, or that my next of kin may suffer, as a result of my participation in the sport of pickleball including, but not limited to, my use of the premises DUE TO ANY CAUSE WHATSOEVER, INCLUDING NEGLIGENCE, BREACH OF CONTRACT, OR BREACH OF ANY STATUTORY OR OTHER DUTY OF CARE, INCLUDING ANY DUTY OF CARE OWED UNDER ANY PROVINCIAL OCCUPIERS’ LIABILITY LEGISLATION ON THE PART OF THE RELEASEES. I UNDERSTAND THAT NEGLIGENCE INCLUDES THE FAILURE ON PART OF THE RELEASEES TO TAKE REASONABLE STEPS TO SAFEGUARD OR PROTECT ME FROM THE RISKS, DANGERS AND HAZARDS REFERRED TO ABOVE.</li>
-
-            <li>TO HOLD HARMLESS AND INDEMNIFY THE RELEASEES from any and all liability for any damage to property of or personal injury to any third party, resulting from my use of or presence on the premises;</li>
-
-            <li>This Release Agreement shall be effective and binding upon my heirs, next of kin, executors, administrators, assigns and representatives, in the event of my death or incapacity;</li>
-
-            <li>This Release Agreement and any rights, duties and obligations as between the parties to this Release Agreement shall be governed by and interpreted solely in accordance with the laws of the Province of Ontario and no other jurisdiction; and</li>
-
-            <li>Any litigation involving the parties to this Release Agreement shall be brought solely within the Province of Ontario, and shall be within the exclusive jurisdiction of the Courts of the Province of Ontario.</li>
-          </ol>
-
-          <p>In entering into this Release Agreement I am not relying upon any oral or written representations or statements made by the Releasees with respect to the safety of pickleball other than what is set forth in this Agreement.</p>
-
-          <p>I HAVE READ AND UNDERSTAND THIS RELEASE AGREEMENT AND I AM AWARE THAT BY SIGNING THIS AGREEMENT I AM WAIVING CERTAIN LEGAL RIGHTS WHICH I OR MY HEIRS, NEXT OF KIN, EXECUTORS, ADMINISTRATORS, ASSIGNS AND REPRESENTATIVES MAY HAVE AGAINST THE RELEASEES.</p>
-
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="1" id="agree2Checkbox" name="agree2">
-            <label class="form-check-label" for="agree2">I have read and agree to the above</label>
-          </div>            
- 
         </div>
       </div>
     </form>
