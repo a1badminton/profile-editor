@@ -126,8 +126,8 @@
               </div>
               <div class="col-md-6">
               <div class="form-floating">
-                <input type="text" class="form-control" id="parentFamilyNamesInput" name="parentFamilyNames">
-                <label for="parentFamilyNames" class="form-label">Family Name(s) (or Surname)</label>
+                <input type="text" class="form-control" id="parentFamilyNamesInput" name="parentFamilyNames" required>
+                <label for="parentFamilyNames" class="form-label">Family Name(s) (or Surname) <i class="bi bi-asterisk required-field"></i></label>
               </div>
             </div>
           </div>
@@ -169,35 +169,53 @@
             <input type="text" class="form-control" id="birthDateInput" name="dob" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
             <label for="dob" class="form-label">Birthdate (YYYY-MM-DD) <i class="bi bi-asterisk required-field"></i></label>
           </div>
-          <!-- see https://github.com/twbs/bootstrap/issues/41520 for floating label anomaly -->
-          <div class="input-group form-floating mb-3">
-            <select class="form-select" id="genderSelect" name="gender" required aria-label="Gender Identity">
-              <option selected disabled>Choose ...</option>
-              <option value="M">Male</option>
-              <option value="F">Female</option>
-              <option value="O">Prefer to self-identify as:</option>
-              <option value="-">Prefer not to answer</option>
-            </select>
-            <input type="text" class="form-control" id="genderInput" name="selfIdentifyGender" disabled>
-            <label for="gender" class="form-label">Gender <i class="bi bi-asterisk required-field"></i></label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="pronounsInput" name="pronouns" aria-describedby="pronounsHelp">
-            <label for="pronouns" class="form-label">Pronouns (subject/object/possessive/possessive pronoun/reflexive)</label>
-            <div id="pronounsHelp" class="form-text">Examples: he/him/his/his/himself and she/her/her/hers/herself</div>
+
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <!-- see https://github.com/twbs/bootstrap/issues/41520 for floating label anomaly -->
+              <div class="input-group form-floating">
+                <select class="form-select" id="genderSelect" name="gender" required aria-label="Gender Identity">
+                  <option selected disabled>Choose ...</option>
+                  <option value="M">Male</option>
+                  <option value="F">Female</option>
+                  <option value="O">Prefer to self-identify as:</option>
+                  <option value="-">Prefer not to answer</option>
+                </select>
+                <input type="text" class="form-control" id="genderInput" name="selfIdentifyGender" disabled>
+                <label for="gender" class="form-label">Gender <i class="bi bi-asterisk required-field"></i></label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="pronounsInput" name="pronouns" aria-describedby="pronounsHelp">
+                <label for="pronouns" class="form-label">Pronouns (subject/object/possessive/possessive pronoun/reflexive)</label>
+                <div id="pronounsHelp" class="form-text">Examples: he/him/his/his/himself and she/her/her/hers/herself</div>
+              </div>
+            </div>
           </div>
 
           <div class="row g-3 mb-3">
             <div class="col-md-6">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="1" id="indigenousPeoplesCheckbox" name="indigenousPeoples">
-                <label class="form-check-label" for="indigenousPeoples">Indigenous Peoples (First Nations, Inuit, Métis)</label>
+              <div class="form-floating">
+                <select class="form-select" id="indigenousPeoplesSelect" name="indigenousPeoples">
+                  <option selected disabled>Choose ...</option>
+                  <option value="0">None</option>
+                  <option value="1">First Nations, Inuit, Métis</option>
+                  <option value="2">Ancestry but non-status</option>
+                  <option value="3">Prefer not to answer</option>
+                </select>
+                <label for="indiggenousPeoples" class="form-label">Indigenous Peoples <i class="bi bi-asterisk required-field"></i></label>
               </div>
             </div>
             <div class="col-md-6">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="1" id="personWithADisabilityCheckbox" name="personWithADisabilty">
-                <label class="form-check-label" for="personWithADisability">Person with a Disability</label>
+              <div class="form-floating">
+                <select class="form-select" id="disabilitySelect" name="disability">
+                  <option selected disabled>Choose ...</option>
+                  <option value="0">No</option>
+                  <option value="1">Yes</option>
+                  <option value="2">Prefer not to answer</option>
+                </select>
+                <label for="disability" class="form-label">Participant with a Disability<i class="bi bi-asterisk required-field"></i></label>
               </div>
             </div>
           </div>
