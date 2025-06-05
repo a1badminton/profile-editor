@@ -19,12 +19,17 @@
         <button class="nav-link active" id="agreements-tab" data-bs-toggle="tab" data-bs-target="#agreements-tab-pane" type="button" role="tab" aria-controles="agreements-tab-pane" aria-selected="true">Agreements</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="personal-tab" data-bs-toggle="tab" data-bs-target="#personal-tab-pane" type="button" role="tab" aria-controles="personal-tab-pane" aria-selected="false">Personal Information</button>
+        <button class="nav-link" id="parent-tab" data-bs-toggle="tab" data-bs-target="#parent-tab-pane" type="button" role="tab" aria-controles="parent-tab-pane" aria-selected="false">Parent/Guardian Information</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="participant-tab" data-bs-toggle="tab" data-bs-target="#participant-tab-pane" type="button" role="tab" aria-controles="participant-tab-pane" aria-selected="false">Participant Information</button>
       </li>
     </ul>
     <form>
       <div class="tab-content" id="profileContent">
         <div class="tab-pane border p-2 fade show active" id="agreements-tab-pane" role="tabpanel" aria-labelledby="agreements-tab" tabindex="0">
+
+          <p class="fs-6"><i class="bi bi-asterisk required-field"></i> denotes a required field</p>
 
           <div class="accordion" id="membershipAccordion">
             <div class="accordion-item">
@@ -108,23 +113,61 @@
           </div>
 
         </div>
-        <div class="tab-pane border p-2 fade" id="personal-tab-pane" role="tabpanel" aria-labelledby="personal-tab" tabindex="0">
+        <div class="tab-pane border p-2 fade" id="parent-tab-pane" role="tabpanel" aria-labelledby="parent-tab" tabindex="0">
 
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="firstNameInput" name="fname" required>
-            <label for="fname" class="form-label">First Name</label>
+          <p class="fs-6"><i class="bi bi-asterisk required-field"></i> denotes a required field</p>
+
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="parentGivenNamesInput" name="parentGivenNames" required>
+                <label for="parentGivenNames" class="form-label">Given Name(s) <i class="bi bi-asterisk required-field"></i></label>
+              </div>
+              </div>
+              <div class="col-md-6">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="parentFamilyNamesInput" name="parentFamilyNames">
+                <label for="parentFamilyNames" class="form-label">Family Name(s) (or Surname)</label>
+              </div>
+            </div>
           </div>
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="middleNameInput" name="mname">
-            <label for="mname" class="form-label">Middle Name</label>
+          <div class="row g-3 mb-3">
+            <div class="col-md-3">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="parentPhoneInput" name="parentPhone" required>
+                <label for="parentPhone" class="form-label">Phone <i class="bi bi-asterisk required-field"></i></label>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="parentEmailInput" name="parentEmail" required>
+                <label for="parentEmail" class="form-label">Email <i class="bi bi-asterisk required-field"></i></label>
+              </div>
+            </div>
           </div>
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="lastNameInput" name="lname">
-            <label for="lname" class="form-label">Last Name</label>
+
+        </div>
+        <div class="tab-pane border p-2 fade" id="participant-tab-pane" role="tabpanel" aria-labelledby="participant-tab" tabindex="0">
+
+          <p class="fs-6"><i class="bi bi-asterisk required-field"></i> denotes a required field</p>
+
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="participantGivenNamesInput" name="participantGivenNames" required>
+                <label for="participantGivenNames" class="form-label">Given Name(s) <i class="bi bi-asterisk required-field"></i></label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="participantFamilyNamesInput" name="participantFamilyNames">
+                <label for="participantFamilyNames" class="form-label">Family Name(s) (or Surname) <i class="bi bi-asterisk required-field"></i></label>
+              </div>
+            </div>
           </div>
           <div class="form-floating mb-3">
             <input type="text" class="form-control" id="birthDateInput" name="dob" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
-            <label for="dob" class="form-label">Birthdate (YYYY-MM-DD)</label>
+            <label for="dob" class="form-label">Birthdate (YYYY-MM-DD) <i class="bi bi-asterisk required-field"></i></label>
           </div>
           <!-- see https://github.com/twbs/bootstrap/issues/41520 for floating label anomaly -->
           <div class="input-group form-floating mb-3">
@@ -136,7 +179,7 @@
               <option value="-">Prefer not to answer</option>
             </select>
             <input type="text" class="form-control" id="genderInput" name="selfIdentifyGender" disabled>
-            <label for="gender" class="form-label">Gender</label>
+            <label for="gender" class="form-label">Gender <i class="bi bi-asterisk required-field"></i></label>
           </div>
           <div class="form-floating mb-3">
             <input type="text" class="form-control" id="pronounsInput" name="pronouns" aria-describedby="pronounsHelp">
@@ -144,98 +187,112 @@
             <div id="pronounsHelp" class="form-text">Examples: he/him/his/his/himself and she/her/her/hers/herself</div>
           </div>
 
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="1" id="indigenousPeoplesCheckbox" name="indigenousPeoples">
-            <label class="form-check-label" for="indigenousPeoples">Indigenous Peoples (First Nations, Inuit, Métis)</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="1" id="personWithADisabilityCheckbox" name="personWithADisabilty">
-            <label class="form-check-label" for="personWithADisability">Person with a Disability</label>
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="1" id="indigenousPeoplesCheckbox" name="indigenousPeoples">
+                <label class="form-check-label" for="indigenousPeoples">Indigenous Peoples (First Nations, Inuit, Métis)</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="1" id="personWithADisabilityCheckbox" name="personWithADisabilty">
+                <label class="form-check-label" for="personWithADisability">Person with a Disability</label>
+              </div>
+            </div>
           </div>
 
           <div class="form-floating mb-3">
-            <textarea class="form-control" id="addressInput" name="address" rows="3"></textarea>
-            <label for="address" class="form-label">Address</label>
+            <textarea class="form-control" id="addressInput" name="address" rows="3" required></textarea>
+            <label for="address" class="form-label">Address <i class="bi bi-asterisk required-field"></i></label>
           </div>
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="cityInput" name="city">
-            <label for="city" class="form-label">City</label>
-          </div>
-          <!-- todo: data bind country selection to populate state drop-down -->
-          <div class="form-floating mb-3">
-            <select class="form-select" id="stateSelect" name="state" aria-label="State">
-              <option selected disabled>Choose ...</option>
-              <option value="AB">Alberta</option>
-              <option value="BC">British Columbia</option>
-              <option value="MB">Manitoba</option>
-              <option value="NB">New Brunswick</option>
-              <option value="NL">Newfoundland and Labrador</option>
-              <option value="NT">Northwest Territories</option>
-              <option value="NS">Nova Scotia</option>
-              <option value="NU">Nunavut</option>
-              <option value="ON">Ontario</option>
-              <option value="PE">Prince Edward Island</option>
-              <option value="QC">Québec</option>
-              <option value="SK">Saskatchewan</option>
-              <option value="YT">Yukon Territory</option>
-              <option disabled>------------</option>
-              <option value="AK">Alaska</option>
-              <option value="AL">Alabama</option>
-              <option value="AR">Arkansas</option>
-              <option value="AZ">Arizona</option>
-              <option value="CA">California</option>
-              <option value="CO">Colorado</option>
-              <option value="CT">Connecticut</option>
-              <option value="DC">District of Columbia</option>
-              <option value="DE">Delaware</option>
-              <option value="FL">Florida</option>
-              <option value="GA">Georgia</option>
-              <option value="HI">Hawaii</option>
-              <option value="IA">Iowa</option>
-              <option value="ID">Idaho</option>
-              <option value="IL">Illinois</option>
-              <option value="IN">Indiana</option>
-              <option value="KS">Kansas</option>
-              <option value="KY">Kentucky</option>
-              <option value="LA">Louisiana</option>
-              <option value="MA">Massachusetts</option>
-              <option value="MD">Maryland</option>
-              <option value="ME">Maine</option>
-              <option value="MI">Michigan</option>
-              <option value="MN">Minnesota</option>
-              <option value="MO">Missouri</option>
-              <option value="MS">Mississippi</option>
-              <option value="MT">Montana</option>
-              <option value="NC">North Carolina</option>
-              <option value="ND">North Dakota</option>
-              <option value="NE">Nebraska</option>
-              <option value="NH">New Hampshire</option>
-              <option value="NJ">New Jersey</option>
-              <option value="NM">New Mexico</option>
-              <option value="NV">Nevada</option>
-              <option value="NY">New York</option>
-              <option value="OH">Ohio</option>
-              <option value="OK">Oklahoma</option>
-              <option value="OR">Oregon</option>
-              <option value="PA">Pennsylvania</option>
-              <option value="RI">Rhode Island</option>
-              <option value="SC">South Carolina</option>
-              <option value="SD">South Dakota</option>
-              <option value="TN">Tennessee</option>
-              <option value="TX">Texas</option>
-              <option value="UT">Utah</option>
-              <option value="VA">Virginia</option>
-              <option value="VT">Vermont</option>
-              <option value="WA">Washington</option>
-              <option value="WI">Wisconsin</option>
-              <option value="WV">West Virginia</option>
-              <option value="WY">Wyoming</option>
-            </select>
-            <label for="state" class="form-label">State/Province/Territory</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="zipInput" name="zip">
-            <label for="zip" class="form-label">ZIP/Postal Code</label>
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="cityInput" name="city" required>
+                <label for="city" class="form-label">City <i class="bi bi-asterisk required-field"></i></label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <!-- todo: data bind country selection to populate state drop-down -->
+              <div class="form-floating">
+                <select class="form-select" id="stateSelect" name="state" aria-label="State" required>
+                  <option selected disabled>Choose ...</option>
+                  <option value="AB">Alberta</option>
+                  <option value="BC">British Columbia</option>
+                  <option value="MB">Manitoba</option>
+                  <option value="NB">New Brunswick</option>
+                  <option value="NL">Newfoundland and Labrador</option>
+                  <option value="NT">Northwest Territories</option>
+                  <option value="NS">Nova Scotia</option>
+                  <option value="NU">Nunavut</option>
+                  <option value="ON">Ontario</option>
+                  <option value="PE">Prince Edward Island</option>
+                  <option value="QC">Québec</option>
+                  <option value="SK">Saskatchewan</option>
+                  <option value="YT">Yukon Territory</option>
+                  <option disabled>------------</option>
+                  <option value="AK">Alaska</option>
+                  <option value="AL">Alabama</option>
+                  <option value="AR">Arkansas</option>
+                  <option value="AZ">Arizona</option>
+                  <option value="CA">California</option>
+                  <option value="CO">Colorado</option>
+                  <option value="CT">Connecticut</option>
+                  <option value="DC">District of Columbia</option>
+                  <option value="DE">Delaware</option>
+                  <option value="FL">Florida</option>
+                  <option value="GA">Georgia</option>
+                  <option value="HI">Hawaii</option>
+                  <option value="IA">Iowa</option>
+                  <option value="ID">Idaho</option>
+                  <option value="IL">Illinois</option>
+                  <option value="IN">Indiana</option>
+                  <option value="KS">Kansas</option>
+                  <option value="KY">Kentucky</option>
+                  <option value="LA">Louisiana</option>
+                  <option value="MA">Massachusetts</option>
+                  <option value="MD">Maryland</option>
+                  <option value="ME">Maine</option>
+                  <option value="MI">Michigan</option>
+                  <option value="MN">Minnesota</option>
+                  <option value="MO">Missouri</option>
+                  <option value="MS">Mississippi</option>
+                  <option value="MT">Montana</option>
+                  <option value="NC">North Carolina</option>
+                  <option value="ND">North Dakota</option>
+                  <option value="NE">Nebraska</option>
+                  <option value="NH">New Hampshire</option>
+                  <option value="NJ">New Jersey</option>
+                  <option value="NM">New Mexico</option>
+                  <option value="NV">Nevada</option>
+                  <option value="NY">New York</option>
+                  <option value="OH">Ohio</option>
+                  <option value="OK">Oklahoma</option>
+                  <option value="OR">Oregon</option>
+                  <option value="PA">Pennsylvania</option>
+                  <option value="RI">Rhode Island</option>
+                  <option value="SC">South Carolina</option>
+                  <option value="SD">South Dakota</option>
+                  <option value="TN">Tennessee</option>
+                  <option value="TX">Texas</option>
+                  <option value="UT">Utah</option>
+                  <option value="VA">Virginia</option>
+                  <option value="VT">Vermont</option>
+                  <option value="WA">Washington</option>
+                  <option value="WI">Wisconsin</option>
+                  <option value="WV">West Virginia</option>
+                  <option value="WY">Wyoming</option>
+                </select>
+                <label for="state" class="form-label">Province/Territory/State <i class="bi bi-asterisk required-field"></i></label>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="zipInput" name="zip" required>
+                <label for="zip" class="form-label">Postal/ZIP Code <i class="bi bi-asterisk required-field"></i></label>
+              </div>
+            </div>
           </div>
           <!-- todo: populate full list of countries -->
           <div class="form-floating mb-3">
@@ -244,7 +301,7 @@
               <option value="CA">Canada</option>
               <option value="US">United States</option>
             </select>
-            <label for="country" class="form-label">Country</label>
+            <label for="country" class="form-label">Country <i class="bi bi-asterisk required-field"></i></label>
           </div>
 
           <div class="form-floating mb-3">
@@ -255,22 +312,35 @@
             <input type="text" class="form-control" id="emailInput" name="email">
             <label for="email" class="form-label">Email</label>
           </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" value="1" id="newsletterCheckbox" name="newsletter" switch>
-            <label class="form-check-label" for="newsletter">Opt-in newsletter</label>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" value="1" id="marketingCheckbox" name="marketing" switch>
-            <label class="form-check-label" for="marketing">Opt-in email marketing</label>
+
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" value="1" id="newsletterCheckbox" name="newsletter" switch>
+                <label class="form-check-label" for="newsletter">Opt-in newsletter</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" value="1" id="marketingCheckbox" name="marketing" switch>
+                <label class="form-check-label" for="marketing">Opt-in email marketing</label>
+              </div>
+            </div>
           </div>
 
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="memberIdInput" name="memberId">
-            <label for="memberId" class="form-label">BON Member ID</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="nccpInput" name="nccp">
-            <label for="nccp" class="form-label">Coach NCCP Number</label>
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="memberIdInput" name="memberId">
+                <label for="memberId" class="form-label">BON Member ID</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="nccpInput" name="nccp">
+                <label for="nccp" class="form-label">Coach NCCP Number</label>
+              </div>
+            </div>
           </div>
 
         </div>
