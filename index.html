@@ -257,72 +257,13 @@
         </div>
         <div class="tab-pane border p-2 fade" id="demographics-tab-pane" role="tabpanel" aria-labelledby="demographics-tab" tabindex="0">
 
-          <!-- this was listed under "Additional information" -->
-          <div class="form-floating mb-3">
-            <select class="form-select" id="aaSelect" name="aa" aria-label="Aboriginal Ancestry">
-              <option selected value="">None</option>
-              <option value="f">First Nations</option>
-              <option value="f">Métis</option>
-              <option value="f">Inuit</option>
-              <option value="f">Ancestry but Non-Status</option>
-            </select>
-            <label class="form-check-label" for="aa">Aboriginal Ancestry</label>
-          </div>
-          <!-- from the Locker -->
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="1" id="ipCheckbox" name="ip">
             <label class="form-check-label" for="ip">Indigenous Peoples (First Nations, Inuit, Métis</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="1" id="cafCheckbox" name="caf">
-            <label class="form-check-label" for="caf">Canadian Armed Forces</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="1" id="rcmpCheckbox" name="rcmp">
-            <label class="form-check-label" for="rcmp">RCMP</label>
-          </div>
-          <div class="form-check">
             <input class="form-check-input" type="checkbox" value="1" id="pwadCheckbox" name="pwad">
             <label class="form-check-label" for="pwad">Person with a Disability</label>
-          </div>
-          <!-- the floating label disappears when selection made; reappears when select element loses focus -->
-          <div class="input-group form-floating mb-3">
-            <select class="form-select" id="soSelect" name="so">
-              <option selected disabled>Choose...</option>
-              <option value="1">Asexual</option>
-              <option value="2">Bisexual</option>
-              <option value="3">Gay</option>
-              <option value="4">Lesbian</option>
-              <option value="5">Queer</option>
-              <option value="6">Questioning</option>
-              <option value="7">Straight (Heterosexual)</option>
-              <option value="8">Two-Spirit</option>
-              <option value="9">Pansexual</option>
-              <option value="10">Prefer to self-identify</option>
-              <option value="11">Prefer not to answer</option>
-            </select>
-            <input type="text" class="form-control" id="soSelfIdentifyInput" name="soSelfIdentify" disabled aria-label="Self-identify as">
-            <label class="form-check-label" for="so">Sexual Orientation</label>
-          </div>
-          <!-- "multiple" attribute doesn't work here as it won't resize with the contents -->
-          <div class="input-group form-floating mb-3">
-            <select class="form-select" id="rbSelect" name="rb" multiple>
-              <option selected disabled>Choose...</option>
-              <option value="1">African/Black</option>
-              <option value="2">East Asian</option>
-              <option value="7">European/White</option>
-              <option value="7">Indo-Caribbean, Indo-African, Indo-Fijian, West-Indian</option>
-              <option value="3">Latin, South or Central American</option>
-              <option value="3">Polynesian</option>
-              <option value="5">South Asian</option>
-              <option value="6">Southeast Asian</option>
-              <option value="6">West Asian</option>
-              <option value="6">Indigenous within Canada</option>
-              <option value="8">Prefer to self-identify</option>
-              <option value="9">Prefer not to answer</option>
-            </select>
-            <input type="text" class="form-control" id="rbSelfIdentifyInput" name="rbSelfIdentify" disabled aria-label="Self-identify as">
-            <label class="form-check-label" for="rb">Racial Background</label>
           </div>
 
         </div>
