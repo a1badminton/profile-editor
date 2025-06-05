@@ -54,6 +54,7 @@
             <input type="text" class="form-control" id="birthDateInput" name="dob" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
             <label for="dob" class="form-label">Birthdate (YYYY-MM-DD)</label>
           </div>
+          <!-- see https://github.com/twbs/bootstrap/issues/41520 for floating label anomaly -->
           <div class="input-group form-floating mb-3">
             <select class="form-select" id="genderSelect" name="gender" required aria-label="Gender Identity">
               <option selected disabled>Choose ...</option>
