@@ -27,6 +27,7 @@ and PCNS (Pickleball Canada National System).
 | Data | BCAN | Locker | PCNS |
 | ---- | ---- | ------ | ---- |
 | Photo | Yes (8 MB) | No | Yes |
+| Title | Yes | No | No |
 | Gender (Identity) | Male/Female | Man/Woman/Non-Binary/Two-Spirit/Prefer not to answer | Male/Female/Gender Diverse |
 | Nationality | Country of your passport | | |
 | Street Address | 3 lines | 1 line | 2 lines |
