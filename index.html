@@ -411,36 +411,58 @@
               </div>
             </div>
             <div class="col-md-6">
-              <div class="form-floating">
-                <input type="text" class="form-control" id="pronounsInput" name="pronouns" aria-describedby="pronounsHelp" placeholder="Pronouns">
-                <label for="pronounsInput" class="form-label">Pronouns (subject/object/possessive/possessive pronoun/reflexive)</label>
-                <div id="pronounsHelp" class="form-text">Examples: he/him/his/his/himself and she/her/her/hers/herself</div>
+              <div class="input-group">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="pronounsInput" name="pronouns" placeholder="Pronouns">
+                  <label for="pronounsInput" class="form-label">Pronouns</label>
+                </div>
+                <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" href="#offcanvasPronouns" role="button" aria-controls="offcanvasPronouns"><i class="bi bi-info-circle"></i></button>
               </div>
             </div>
           </div>
 
           <div class="row g-3 mb-3">
-            <div class="col-md-6">
-              <div class="form-floating">
-                <select class="form-select" id="indigenousPeoplesSelect" name="indigenousPeoples" placeholder="Indigenous" required>
-                  <option selected disabled>Choose ...</option>
-                  <option value="0">No</option>
-                  <option value="1">First Nations, Inuit, Métis</option>
-                  <option value="2">Ancestry but non-status</option>
-                  <option value="3">Prefer not to answer</option>
-                </select>
-                <label for="indiggenousPeoplesSelect" class="form-label">Indigenous Peoples <i class="bi bi-asterisk required-field"></i></label>
+            <div class="col-md-4">
+              <div class="input-group">
+                <div class="form-floating">
+                  <select class="form-select" id="indigenousPeoplesSelect" name="indigenousPeoples" placeholder="Indigenous" required>
+                    <option selected disabled>Choose ...</option>
+                    <option value="0">No</option>
+                    <option value="1">First Nations, Inuk (Inuit), Métis</option>
+                    <option value="2">Ancestry but non-status</option>
+                    <option value="3">Prefer not to answer</option>
+                  </select>
+                  <label for="indiggenousPeoplesSelect" class="form-label">Indigenous Peoples <i class="bi bi-asterisk required-field"></i></label>
+                </div>
+                <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" href="#offcanvasVoluntary" role="button" aria-controls="offcanvasVoluntary"><i class="bi bi-info-circle"></i></button>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="form-floating">
-                <select class="form-select" id="disabilitySelect" name="disability" placeholder="Disability" required>
-                  <option selected disabled>Choose ...</option>
-                  <option value="0">No</option>
-                  <option value="1">Yes</option>
-                  <option value="2">Prefer not to answer</option>
-                </select>
-                <label for="disabilitySelect" class="form-label">Participant with a Disability<i class="bi bi-asterisk required-field"></i></label>
+            <div class="col-md-4">
+              <div class="input-group">
+                <div class="form-floating">
+                  <select class="form-select" id="raciliazedSelect" name="racialized" placeholder="Racialized" required>
+                    <option selected disabled>Choose ...</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                    <option value="2">Prefer not to answer</option>
+                  </select>
+                  <label for="racializedSelect" class="form-label">Racialized Person<i class="bi bi-asterisk required-field"></i></label>
+                </div>
+                <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" href="#offcanvasVoluntary" role="button" aria-controls="offcanvasVoluntary"><i class="bi bi-info-circle"></i></button>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="input-group">
+                <div class="form-floating">
+                  <select class="form-select" id="disabilitySelect" name="disability" placeholder="Disability" required>
+                    <option selected disabled>Choose ...</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                    <option value="2">Prefer not to answer</option>
+                  </select>
+                  <label for="disabilitySelect" class="form-label">Person with a Disability<i class="bi bi-asterisk required-field"></i></label>
+                </div>
+                <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" href="#offcanvasVoluntary" role="button" aria-controls="offcanvasVoluntary"><i class="bi bi-info-circle"></i></button>
               </div>
             </div>
           </div>
@@ -625,6 +647,91 @@
       </div>
     </form>
 
+  </div>
+
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasPronouns" aria-labelledby="Pronouns">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasPronounsLabel">Pronouns</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+      <div>
+        <p class="lead p-3">We all deserve to be treated with decency and respect. To affirm everyone's right to be addressed the way they want, you can choose your pronouns.</p>
+        <p class="p-3">Here are some commonly used pronoun sets. (Note: this is not an exhaustive list.)</p>
+
+        <table class="table table-striped table-small small">
+          <thead>
+            <tr>
+              <th scope="col">Subject</th>
+              <th scope="col">Object</th>
+              <th scope="col">Possessive<br>Adjective</th>
+              <th scope="col">Possessive<br>Pronoun</th>
+              <th scope="col">Reflexive</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>he</td>
+              <td>him</td>
+              <td>his</td>
+              <td>his</td>
+              <td>himself</td>
+            </tr>
+            <tr>
+              <td>she</td>
+              <td>her</td>
+              <td>her</td>
+              <td>hers</td>
+              <td>herself</td>
+            </tr>
+            <tr>
+              <td>they</td>
+              <td>them</td>
+              <td>their</td>
+              <td>theirs</td>
+              <td>themselves</td>
+            </tr>
+            <tr>
+              <td>ze</td>
+              <td>hir</td>
+              <td>hir</td>
+              <td>hirs</td>
+              <td>hirself</td>
+            </tr>
+            <tr>
+              <td>ze</td>
+              <td>zir</td>
+              <td>zir</td>
+              <td>zirs</td>
+              <td>zirself</td>
+            </tr>
+            <tr>
+              <td>xe</td>
+              <td>xem</td>
+              <td>xyr</td>
+              <td>xyrs</td>
+              <td>xemself</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasVoluntary" aria-labelledby="Voluntary Disclosure">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasVoluntaryLabel">Voluntary Disclosure</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <p class="lead">We ask these questions because we believe they are relevant to promoting diversity and inclusion even though they are not required by law.</p>
+      <ul>
+        <li>Your answers are <strong>confidential</strong>.</li>
+        <li>Self-identification is <strong>voluntary</strong> -- you can choose "Prefer not to answer".</li>
+        <li>Identifying a disability does not constitute an accommodation.</li>
+        <li>We may use aggregated answers to develop and operate special programs.</li>
+      </ul>
+    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
