@@ -59,31 +59,84 @@
         </div>
         <div class="tab-pane border p-2 fade" id="agreements-tab-pane" role="tabpanel" aria-labelledby="agreements-tab" tabindex="0">
 
-          <p class="fs-6"><i class="bi bi-asterisk required-field"></i> denotes a required field</p>
+          <h4>User Undertaking and Agreement</h4>
 
-          <div class="accordion" id="membershipAccordion">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMembership" aria-expanded=true" aria-controls="collapseMembership">
-                  Membership Details
-                </button>
-              </h2>
-              <div id="collapseMembership" class="accordion-collapse collapse show" data-bs-parent="#membershipAccordion">
-                <div class="accordion-body">
-                  <p>Please be sure to read the terms &amp; conditions on the registration form, assumption of risk and waiver of claims found here: https://www.badmintonontario.ca/membership/</p>
-                  <p>Only Badminton Ontario affiliated clubs will be available for selection when registering or renewing your membership.</p>
-                  <p>If you are a competitive player at a non-Badminton Ontario affiliated club, you must register and compete as an ‘Independent’. Every Zone/District Association has an ‘Independent’ option in the clubs listing when you register in Tournament Software.</p>
-                  <p>If you are an independent competitive player who is not a member of a Badminton Ontario affiliated club, you must register and compete as an ‘Independent’. Every Zone/District Association has an ‘Independent’ option in the clubs listing when registering in Tournament Software.</p>
-                  <p>If you are not over 18, then please ask a parent or guardian for permission to continue.</p>
+          <div class="alert alert-warning" role="alert">
+            <h4><i class="bi bi-exclamation-triangle-fill"></i> Please read carefully!</h4>
+            <p class="mb-0">
+              These are legally binding agreements. You are advised to clarify any questions or concerns before agreeing to be bound by these agreements.
+              For participants under the age of 18, a parent or guardian must provide permission to continue.
+              In general, these agreements shall apply to all subsequent membership renewals.
+              Upon reaching the age of majority, participants will be asked to reaffirm the agreements.
+            </p>
+          </div>
+
+          <p class="small"><i class="bi bi-asterisk required-field"></i> denotes a required field</p>
+
+          <div class="visually-hidden" id="parentalConsent">
+            <hr>
+
+            <p class="lead">
+              This Agreement must be signed by the Participant and/or the Participant’s parent/guardian (if
+              applicable, when the Participant is younger than the age of majority in his/her province of
+              residence) prior to participation. The age of majority in the Province of Ontario is eighteen (18)
+              years old. The Participant agrees to be bound by and acknowledges the terms set out in this
+              Agreement . When applicable, the Participant’s parent/guardian acknowledges and agrees to
+              the terms on behalf of the Participant and references in this document to the Participant
+              agreeing to or acknowledging a risk or term is understood to be referring to the Participant’s
+              parent/guardian agreeing to or acknowledging the risk or term on behalf of the Participant.
+            </p>
+
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="parentGivenNamesInput" name="parentGivenNames" placeholder="Given Name" required>
+                  <label for="parentGivenNamesInput" class="form-label">Parent/Guardian's Given Name(s) <i class="bi bi-asterisk required-field"></i></label>
+                </div>
+                </div>
+                <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="parentFamilyNamesInput" name="parentFamilyNames" placeholder="Family Name" required>
+                  <label for="parentFamilyNamesInput" class="form-label">Family Name(s) (or Surname) <i class="bi bi-asterisk required-field"></i></label>
+                </div>
+              </div>
+            </div>
+            <div class="row g-3 mb-3">
+              <div class="col-md-3">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="parentPhoneInput" name="parentPhone" placeholder="416-555-1212" required>
+                  <label for="parentPhoneInput" class="form-label">Phone <i class="bi bi-asterisk required-field"></i></label>
+                </div>
+              </div>
+              <div class="col-md-9">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="parentEmailInput" name="parentEmail" placeholder="test@example.com" required>
+                  <label for="parentEmailInput" class="form-label">Email <i class="bi bi-asterisk required-field"></i></label>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- missing parental consent -->
+          <p class="lead">
+          </p>
 
-          <!-- BON rules & regulations -->
-          <h4>BADMINTON ONTARIO USER UNDERTAKING AND AGREEMENT</h4>
+          <div class="accordion" id="membershipAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMembership" aria-expanded=true" aria-controls="collapseMembership">
+                  <h5>Assumption of Risk and Waiver of Claims and Liability</h5>
+                </button>
+              </h2>
+              <div id="collapseMembership" class="accordion-collapse collapse show" data-bs-parent="#membershipAccordion">
+                <div class="accordion-body">
+                  Copy and paste from https://badmintonontario.ca/wp-content/uploads/2020/09/BON-AoR-and-Waiver-of-Claims-Agreement-Version-3-Final.pdf
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="border">
+            In layman terms, ...
+          </div>
 
           <p class="lead">IN CONSIDERATION OF ACCEPTANCE OF MY USE OF THIS SERVICE with Badminton Ontario, I, intending to be legally bound, do hereby, for myself, my heirs, executors and administrators, parents or guardians:</p>
           <ol class="list-lower-roman">
@@ -142,46 +195,6 @@
             <label class="form-check-label" for="agree2Checkbox">I have read and agree to the above</label>
           </div>
 
-          <div class="visually-hidden" id="parentalRelease">
-            <hr>
-
-            <p class="lead">Insert parental release form here</p>
-
-            <div class="form-check mb-3">
-              <input class="form-check-input" type="checkbox" value="1" id="agree3Checkbox" name="agree2">
-              <label class="form-check-label" for="agree3Checkbox">I have read and agree to the above</label>
-            </div>
-
-            <div class="row g-3 mb-3">
-              <div class="col-md-6">
-                <div class="form-floating">
-                  <input type="text" class="form-control" id="parentGivenNamesInput" name="parentGivenNames" placeholder="Given Name" required>
-                  <label for="parentGivenNamesInput" class="form-label">Given Name(s) <i class="bi bi-asterisk required-field"></i></label>
-                </div>
-                </div>
-                <div class="col-md-6">
-                <div class="form-floating">
-                  <input type="text" class="form-control" id="parentFamilyNamesInput" name="parentFamilyNames" placeholder="Family Name" required>
-                  <label for="parentFamilyNamesInput" class="form-label">Family Name(s) (or Surname) <i class="bi bi-asterisk required-field"></i></label>
-                </div>
-              </div>
-            </div>
-            <div class="row g-3 mb-3">
-              <div class="col-md-3">
-                <div class="form-floating">
-                  <input type="text" class="form-control" id="parentPhoneInput" name="parentPhone" placeholder="416-555-1212" required>
-                  <label for="parentPhoneInput" class="form-label">Phone <i class="bi bi-asterisk required-field"></i></label>
-                </div>
-              </div>
-              <div class="col-md-9">
-                <div class="form-floating">
-                  <input type="text" class="form-control" id="parentEmailInput" name="parentEmail" placeholder="test@example.com" required>
-                  <label for="parentEmailInput" class="form-label">Email <i class="bi bi-asterisk required-field"></i></label>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <div class="row g-3 mb-3">
             <div class="col-auto">
               <a id="cancelAgreement" href="#" class="btn btn-danger">Cancel</a>
@@ -192,13 +205,13 @@
         </div>
         <div class="tab-pane border p-2 fade" id="participant-tab-pane" role="tabpanel" aria-labelledby="participant-tab" tabindex="0">
 
-          <p class="fs-6"><i class="bi bi-asterisk required-field"></i> denotes a required field</p>
+          <p class="small"><i class="bi bi-asterisk required-field"></i> denotes a required field</p>
 
           <div class="row g-3 mb-3">
             <div class="col-md-6">
               <div class="form-floating">
                 <input type="text" class="form-control" id="participantGivenNamesInput" name="participantGivenNames" placeholder="Given Name" required>
-                <label for="participantGivenNamesInput" class="form-label">Given Name(s) <i class="bi bi-asterisk required-field"></i></label>
+                <label for="participantGivenNamesInput" class="form-label">Participant's Given Name(s) <i class="bi bi-asterisk required-field"></i></label>
               </div>
             </div>
             <div class="col-md-6">
@@ -742,7 +755,7 @@ $(document).ready(function() {
     // parental release should not be visible
     $('#agreements-tab').parent().removeClass('visually-hidden');
     $('#agreements-tab').click();
-    $('#parentalRelease').removeClass('visually-hidden').addClass('visually-hidden');
+    $('#parentalConsent').removeClass('visually-hidden').addClass('visually-hidden');
     // participant phone/email are required
     $('#phoneInput').prop('required', true);
     $('#emailInput').prop('required', true);
@@ -754,7 +767,7 @@ $(document).ready(function() {
     // parental release should be visible
     $('#agreements-tab').parent().removeClass('visually-hidden');
     $('#agreements-tab').click();
-    $('#parentalRelease').removeClass('visually-hidden');
+    $('#parentalConsent').removeClass('visually-hidden');
     // participant phone/email are optional
     $('#phoneInput').prop('required', false);
     $('#emailInput').prop('required', false);
