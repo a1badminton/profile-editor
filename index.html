@@ -14,20 +14,50 @@
 
   <div id="member-profile" class="container">
 
-    <ul class="nav nav-tabs" id="profileTab" role="tablist">
+    <ul class="nav nav-pills" id="profileTab" role="tablist">
       <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="agreements-tab" data-bs-toggle="tab" data-bs-target="#agreements-tab-pane" type="button" role="tab" aria-controles="agreements-tab-pane" aria-selected="true">Agreements</button>
+        <button class="nav-link active" id="start-tab" data-bs-toggle="tab" data-bs-target="#start-tab-pane" type="button" role="tab" aria-controls="start-tab-pane" aria-selected="true"><i class="bi bi-1-circle"></i> Start</button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="parent-tab" data-bs-toggle="tab" data-bs-target="#parent-tab-pane" type="button" role="tab" aria-controles="parent-tab-pane" aria-selected="false">Parent/Guardian Information</button>
+      <li class="nav-item visually-hidden" role="presentation">
+        <button class="nav-link" id="agreements-tab" data-bs-toggle="tab" data-bs-target="#agreements-tab-pane" type="button" role="tab" aria-controls="agreements-tab-pane" aria-selected="false"><i class="bi bi-2-circle"></i> Agreements</button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="participant-tab" data-bs-toggle="tab" data-bs-target="#participant-tab-pane" type="button" role="tab" aria-controles="participant-tab-pane" aria-selected="false">Participant Information</button>
+      <li class="nav-item visually-hidden" role="presentation">
+        <button class="nav-link" id="participant-tab" data-bs-toggle="tab" data-bs-target="#participant-tab-pane" type="button" role="tab" aria-controls="participant-tab-pane" aria-selected="false"><i class="bi bi-3-circle"></i> Participant Information</button>
+      </li>
+      <li class="nav-item visually-hidden" role="presentation">
+        <button class="nav-link" id="payment-tab" data-bs-toggle="tab" data-bs-target="#payment-tab-pane" type="button" role="tab" aria-controls="payment-tab-pane" aria-selected="false"><i class="bi bi-4-circle"></i> Payment</button>
       </li>
     </ul>
     <form>
       <div class="tab-content" id="profileContent">
-        <div class="tab-pane border p-2 fade show active" id="agreements-tab-pane" role="tabpanel" aria-labelledby="agreements-tab" tabindex="0">
+        <div class="tab-pane border p-2 fade show active" id="start-tab-pane" role="tabpanel" aria-labelledby="start-tab" tabindex="0">
+
+          <!-- process wizard -->
+          <div class="row mb-3">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+              <div class="card text-center">
+                <img src="participant-silhouette.png" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Participant Sign-Up</h5>
+                  <p class="card-text">I am the participant and I am 18 or over.</p>
+                  <a id="participantSignup" href="#" class="btn btn-primary">Sign-Up</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card text-center">
+                <img src="parent-silhouette.png" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Parent/Guardian Sign-Up</h5>
+                  <p class="card-text">I am a parent/guardian of a participant under 18.</p>
+                  <a id="parentSignup" href="#" class="btn btn-primary">Sign-Up</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="tab-pane border p-2 fade" id="agreements-tab-pane" role="tabpanel" aria-labelledby="agreements-tab" tabindex="0">
 
           <p class="fs-6"><i class="bi bi-asterisk required-field"></i> denotes a required field</p>
 
@@ -64,9 +94,9 @@
           </ol>
           <p>Furthermore, I agree that I have read and accept the provisions, where applicable, to the <a class="link icon-link" href="https://www.badminton.ca/file/821889/?dl=1">Badminton Canada Privacy Policy <i class="bi bi-link-45deg"></i></a> as posted on the Badminton Canada Website (www.badminton.ca).</p>
 
-          <div class="form-check">
+          <div class="form-check mb-3">
             <input class="form-check-input" type="checkbox" value="1" id="agreeCheckbox" name="agree">
-            <label class="form-check-label" for="agree">I agree to these Rules &amp; Regulations.</label>
+            <label class="form-check-label" for="agreeCheckbox">I agree to these Rules &amp; Regulations.</label>
           </div>
 
           <hr>
@@ -107,42 +137,55 @@
 
           <p>I HAVE READ AND UNDERSTAND THIS RELEASE AGREEMENT AND I AM AWARE THAT BY SIGNING THIS AGREEMENT I AM WAIVING CERTAIN LEGAL RIGHTS WHICH I OR MY HEIRS, NEXT OF KIN, EXECUTORS, ADMINISTRATORS, ASSIGNS AND REPRESENTATIVES MAY HAVE AGAINST THE RELEASEES.</p>
 
-          <div class="form-check">
+          <div class="form-check mb-3">
             <input class="form-check-input" type="checkbox" value="1" id="agree2Checkbox" name="agree2">
-            <label class="form-check-label" for="agree2">I have read and agree to the above</label>
+            <label class="form-check-label" for="agree2Checkbox">I have read and agree to the above</label>
           </div>
 
-        </div>
-        <div class="tab-pane border p-2 fade" id="parent-tab-pane" role="tabpanel" aria-labelledby="parent-tab" tabindex="0">
+          <div class="visually-hidden" id="parentalRelease">
+            <hr>
 
-          <p class="fs-6"><i class="bi bi-asterisk required-field"></i> denotes a required field</p>
+            <p class="lead">Insert parental release form here</p>
 
-          <div class="row g-3 mb-3">
-            <div class="col-md-6">
-              <div class="form-floating">
-                <input type="text" class="form-control" id="parentGivenNamesInput" name="parentGivenNames" required>
-                <label for="parentGivenNames" class="form-label">Given Name(s) <i class="bi bi-asterisk required-field"></i></label>
-              </div>
-              </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="1" id="agree3Checkbox" name="agree2">
+              <label class="form-check-label" for="agree3Checkbox">I have read and agree to the above</label>
+            </div>
+
+            <div class="row g-3 mb-3">
               <div class="col-md-6">
-              <div class="form-floating">
-                <input type="text" class="form-control" id="parentFamilyNamesInput" name="parentFamilyNames" required>
-                <label for="parentFamilyNames" class="form-label">Family Name(s) (or Surname) <i class="bi bi-asterisk required-field"></i></label>
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="parentGivenNamesInput" name="parentGivenNames" placeholder="Given Name" required>
+                  <label for="parentGivenNamesInput" class="form-label">Given Name(s) <i class="bi bi-asterisk required-field"></i></label>
+                </div>
+                </div>
+                <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="parentFamilyNamesInput" name="parentFamilyNames" placeholder="Family Name" required>
+                  <label for="parentFamilyNamesInput" class="form-label">Family Name(s) (or Surname) <i class="bi bi-asterisk required-field"></i></label>
+                </div>
+              </div>
+            </div>
+            <div class="row g-3 mb-3">
+              <div class="col-md-3">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="parentPhoneInput" name="parentPhone" placeholder="416-555-1212" required>
+                  <label for="parentPhoneInput" class="form-label">Phone <i class="bi bi-asterisk required-field"></i></label>
+                </div>
+              </div>
+              <div class="col-md-9">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="parentEmailInput" name="parentEmail" placeholder="test@example.com" required>
+                  <label for="parentEmailInput" class="form-label">Email <i class="bi bi-asterisk required-field"></i></label>
+                </div>
               </div>
             </div>
           </div>
+
           <div class="row g-3 mb-3">
-            <div class="col-md-3">
-              <div class="form-floating">
-                <input type="text" class="form-control" id="parentPhoneInput" name="parentPhone" required>
-                <label for="parentPhone" class="form-label">Phone <i class="bi bi-asterisk required-field"></i></label>
-              </div>
-            </div>
-            <div class="col-md-9">
-              <div class="form-floating">
-                <input type="text" class="form-control" id="parentEmailInput" name="parentEmail" required>
-                <label for="parentEmail" class="form-label">Email <i class="bi bi-asterisk required-field"></i></label>
-              </div>
+            <div class="col-auto">
+              <a id="cancelAgreement" href="#" class="btn btn-danger">Cancel</a>
+              <a id="nextProfile" href="#" class="btn btn-primary">Next</a>
             </div>
           </div>
 
@@ -154,41 +197,46 @@
           <div class="row g-3 mb-3">
             <div class="col-md-6">
               <div class="form-floating">
-                <input type="text" class="form-control" id="participantGivenNamesInput" name="participantGivenNames" required>
-                <label for="participantGivenNames" class="form-label">Given Name(s) <i class="bi bi-asterisk required-field"></i></label>
+                <input type="text" class="form-control" id="participantGivenNamesInput" name="participantGivenNames" placeholder="Given Name" required>
+                <label for="participantGivenNamesInput" class="form-label">Given Name(s) <i class="bi bi-asterisk required-field"></i></label>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-floating">
-                <input type="text" class="form-control" id="participantFamilyNamesInput" name="participantFamilyNames">
-                <label for="participantFamilyNames" class="form-label">Family Name(s) (or Surname) <i class="bi bi-asterisk required-field"></i></label>
+                <input type="text" class="form-control" id="participantFamilyNamesInput" name="participantFamilyNames" placeholder="Family Name" required>
+                <label for="participantFamilyNamesInput" class="form-label">Family Name(s) (or Surname) <i class="bi bi-asterisk required-field"></i></label>
               </div>
             </div>
           </div>
           <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="birthDateInput" name="dob" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
-            <label for="dob" class="form-label">Birthdate (YYYY-MM-DD) <i class="bi bi-asterisk required-field"></i></label>
+            <input type="text" class="form-control" id="birthDateInput" name="dob" required placeholder="YYYY-MM-DD" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+            <label for="birthDateInput" class="form-label">Birthdate (YYYY-MM-DD) <i class="bi bi-asterisk required-field"></i></label>
           </div>
 
           <div class="row g-3 mb-3">
             <div class="col-md-6">
               <!-- see https://github.com/twbs/bootstrap/issues/41520 for floating label anomaly -->
-              <div class="input-group form-floating">
-                <select class="form-select" id="genderSelect" name="gender" required aria-label="Gender Identity">
-                  <option selected disabled>Choose ...</option>
-                  <option value="M">Male</option>
-                  <option value="F">Female</option>
-                  <option value="O">Prefer to self-identify as:</option>
-                  <option value="-">Prefer not to answer</option>
-                </select>
-                <input type="text" class="form-control" id="genderInput" name="selfIdentifyGender" disabled>
-                <label for="gender" class="form-label">Gender <i class="bi bi-asterisk required-field"></i></label>
+              <div class="input-group">
+                <div class="form-floating">
+                  <select class="form-select" id="genderSelect" name="gender" required aria-label="Gender Identity" placeholder="Gender Identity">
+                    <option selected disabled>Choose ...</option>
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                    <option value="O">Prefer to self-identify as:</option>
+                    <option value="-">Prefer not to answer</option>
+                  </select>
+                  <label for="genderSelect" class="form-label">Gender <i class="bi bi-asterisk required-field"></i></label>
+                </div>
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="genderInput" name="selfIdentifyGender" disabled placeholder="Self Identify As">
+                  <label for="genderInput" class="form-label">Gender Identity <i class="bi bi-asterisk required-field"></i></label>
+                </div>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-floating">
-                <input type="text" class="form-control" id="pronounsInput" name="pronouns" aria-describedby="pronounsHelp">
-                <label for="pronouns" class="form-label">Pronouns (subject/object/possessive/possessive pronoun/reflexive)</label>
+                <input type="text" class="form-control" id="pronounsInput" name="pronouns" aria-describedby="pronounsHelp" placeholder="Pronouns">
+                <label for="pronounsInput" class="form-label">Pronouns (subject/object/possessive/possessive pronoun/reflexive)</label>
                 <div id="pronounsHelp" class="form-text">Examples: he/him/his/his/himself and she/her/her/hers/herself</div>
               </div>
             </div>
@@ -197,44 +245,44 @@
           <div class="row g-3 mb-3">
             <div class="col-md-6">
               <div class="form-floating">
-                <select class="form-select" id="indigenousPeoplesSelect" name="indigenousPeoples">
+                <select class="form-select" id="indigenousPeoplesSelect" name="indigenousPeoples" placeholder="Indigenous" required>
                   <option selected disabled>Choose ...</option>
-                  <option value="0">None</option>
+                  <option value="0">No</option>
                   <option value="1">First Nations, Inuit, Métis</option>
                   <option value="2">Ancestry but non-status</option>
                   <option value="3">Prefer not to answer</option>
                 </select>
-                <label for="indiggenousPeoples" class="form-label">Indigenous Peoples <i class="bi bi-asterisk required-field"></i></label>
+                <label for="indiggenousPeoplesSelect" class="form-label">Indigenous Peoples <i class="bi bi-asterisk required-field"></i></label>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-floating">
-                <select class="form-select" id="disabilitySelect" name="disability">
+                <select class="form-select" id="disabilitySelect" name="disability" placeholder="Disability" required>
                   <option selected disabled>Choose ...</option>
                   <option value="0">No</option>
                   <option value="1">Yes</option>
                   <option value="2">Prefer not to answer</option>
                 </select>
-                <label for="disability" class="form-label">Participant with a Disability<i class="bi bi-asterisk required-field"></i></label>
+                <label for="disabilitySelect" class="form-label">Participant with a Disability<i class="bi bi-asterisk required-field"></i></label>
               </div>
             </div>
           </div>
 
           <div class="form-floating mb-3">
-            <textarea class="form-control" id="addressInput" name="address" rows="3" required></textarea>
-            <label for="address" class="form-label">Address <i class="bi bi-asterisk required-field"></i></label>
+            <textarea class="form-control" id="addressInput" name="address" rows="3" required placeholder="Address"></textarea>
+            <label for="addressInput" class="form-label">Address <i class="bi bi-asterisk required-field"></i></label>
           </div>
           <div class="row g-3 mb-3">
             <div class="col-md-6">
               <div class="form-floating">
-                <input type="text" class="form-control" id="cityInput" name="city" required>
-                <label for="city" class="form-label">City <i class="bi bi-asterisk required-field"></i></label>
+                <input type="text" class="form-control" id="cityInput" name="city" required placeholder="City">
+                <label for="cityInput" class="form-label">City <i class="bi bi-asterisk required-field"></i></label>
               </div>
             </div>
             <div class="col-md-4">
               <!-- todo: data bind country selection to populate state drop-down -->
               <div class="form-floating">
-                <select class="form-select" id="stateSelect" name="state" aria-label="State" required>
+                <select class="form-select" id="stateSelect" name="state" aria-label="State" required placeholder="State">
                   <option selected disabled>Choose ...</option>
                   <option value="AB">Alberta</option>
                   <option value="BC">British Columbia</option>
@@ -302,46 +350,46 @@
                   <option value="WV">West Virginia</option>
                   <option value="WY">Wyoming</option>
                 </select>
-                <label for="state" class="form-label">Province/Territory/State <i class="bi bi-asterisk required-field"></i></label>
+                <label for="stateSelect" class="form-label">Province/Territory/State <i class="bi bi-asterisk required-field"></i></label>
               </div>
             </div>
             <div class="col-md-2">
               <div class="form-floating">
-                <input type="text" class="form-control" id="zipInput" name="zip" required>
-                <label for="zip" class="form-label">Postal/ZIP Code <i class="bi bi-asterisk required-field"></i></label>
+                <input type="text" class="form-control" id="zipInput" name="zip" required placeholder="H0H 0H0">
+                <label for="zipInput" class="form-label">Postal/ZIP Code <i class="bi bi-asterisk required-field"></i></label>
               </div>
             </div>
           </div>
           <!-- todo: populate full list of countries -->
           <div class="form-floating mb-3">
-            <select class="form-select" id="countrySelect" name="country" required aria-label="Country">
+            <select class="form-select" id="countrySelect" name="country" required aria-label="Country" placeholder="Country">
               <option selected disabled>Choose ...</option>
               <option value="CA">Canada</option>
               <option value="US">United States</option>
             </select>
-            <label for="country" class="form-label">Country <i class="bi bi-asterisk required-field"></i></label>
+            <label for="countrySelect" class="form-label">Country <i class="bi bi-asterisk required-field"></i></label>
           </div>
 
           <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="phoneInput" name="phone">
-            <label for="phone" class="form-label">Phone</label>
+            <input type="text" class="form-control" id="phoneInput" name="phone" placeholder="416-555-1212">
+            <label for="phoneInput" class="form-label">Phone</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="emailInput" name="email">
-            <label for="email" class="form-label">Email</label>
+            <input type="text" class="form-control" id="emailInput" name="email" placeholder="test@@example.com">
+            <label for="emailInput" class="form-label">Email</label>
           </div>
 
           <div class="row g-3 mb-3">
             <div class="col-md-6">
               <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" role="switch" value="1" id="newsletterCheckbox" name="newsletter" switch>
-                <label class="form-check-label" for="newsletter">Opt-in newsletter</label>
+                <label class="form-check-label" for="newsletterCheckbox">Opt-in newsletter</label>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" role="switch" value="1" id="marketingCheckbox" name="marketing" switch>
-                <label class="form-check-label" for="marketing">Opt-in email marketing</label>
+                <label class="form-check-label" for="marketingCheckbox">Opt-in email marketing</label>
               </div>
             </div>
           </div>
@@ -349,17 +397,29 @@
           <div class="row g-3 mb-3">
             <div class="col-md-6">
               <div class="form-floating">
-                <input type="text" class="form-control" id="memberIdInput" name="memberId">
-                <label for="memberId" class="form-label">BON Member ID</label>
+                <input type="text" class="form-control" id="memberIdInput" name="memberId" placeholder="BON Member ID">
+                <label for="memberIdInput" class="form-label">BON Member ID</label>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-floating">
-                <input type="text" class="form-control" id="nccpInput" name="nccp">
-                <label for="nccp" class="form-label">Coach NCCP Number</label>
+                <input type="text" class="form-control" id="nccpInput" name="nccp" placeholder="NCCP #">
+                <label for="nccpInput" class="form-label">Coach NCCP Number</label>
               </div>
             </div>
           </div>
+
+          <div class="row g-3 mb-3">
+            <div class="col-auto">
+              <a id="cancelProfile" href="#" class="btn btn-danger">Cancel</a>
+              <a id="nextPayment" href="#" class="btn btn-primary">Next</a>
+            </div>
+          </div>
+
+        </div>
+        <div class="tab-pane border p-2 fade" id="payment-tab-pane" role="tabpanel" aria-labelledby="payment-tab" tabindex="0">
+
+          <p class="fs-6"><i class="bi bi-asterisk required-field"></i> denotes a required field</p>
 
         </div>
       </div>
@@ -369,6 +429,42 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+$(document).ready(function() {
+  $('#participantSignup').on('click', function(evt) {
+    $('#agreements-tab').parent().removeClass('visually-hidden');
+    $('#agreements-tab').click();
+    $('#parentalRelease').removeClass('visually-hidden').addClass('visually-hidden');
+  });
+
+  $('#parentSignup').on('click', function(evt) {
+    $('#agreements-tab').parent().removeClass('visually-hidden');
+    $('#agreements-tab').click();
+    $('#parentalRelease').removeClass('visually-hidden');
+  });
+
+  $('#cancelAgreement').on('click', function(evt) {
+    $('#agreements-tab').parent().addClass('visually-hidden');
+    $('#start-tab').click();
+  });
+
+  $('#nextProfile').on('click', function(evt) {
+    $('#participant-tab').parent().removeClass('visually-hidden');
+    $('#participant-tab').click();
+  });
+
+  $('#cancelProfile').on('click', function(evt) {
+    $('#agreements-tab').parent().addClass('visually-hidden');
+    $('#participant-tab').parent().addClass('visually-hidden');
+    $('#start-tab').click();
+  });
+
+  $('#nextPayment').on('click', function(evt) {
+    $('#payment-tab').parent().removeClass('visually-hidden');
+    $('#payment-tab').click();
+  });
+});
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
   <script>
   $(document).ready(function(){ $('input[name="dob"]').inputmask("9999-99-99");
