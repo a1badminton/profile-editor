@@ -596,7 +596,30 @@
         </div>
         <div class="tab-pane border p-2 fade" id="payment-tab-pane" role="tabpanel" aria-labelledby="payment-tab" tabindex="0">
 
-          <p class="fs-6"><i class="bi bi-asterisk required-field"></i> denotes a required field</p>
+          <p class="lead">Your information has been saved. To complete registration, please select one of the following payment options.</p>
+
+          <div class="row mb-3">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+              <div class="card text-center">
+                <div class="card-body">
+                  <h5 class="card-title">Interac e-Transfer</h5>
+                  <p class="card-text">I will send $111.87 ($99 + HST) via Interac e-Transfer to info@example.ca</p>
+                  <a id="interac" href="#" class="btn btn-primary">Send me a Request for Money</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card text-center">
+                <div class="card-body">
+                  <h5 class="card-title">Credit Card</h5>
+                  <p class="card-text">Please charge $115.23 ($99 + HST + 3% processing fee) to my credit card.</p>
+                  <a id="stripe" href="#" class="btn btn-primary">Send me a (Stripe Payment) Invoice</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="thankyouPlaceholder"></div>
 
         </div>
       </div>
@@ -660,6 +683,16 @@ $(document).ready(function() {
     } else {
       $('#genderInput').prop('disabled', true);
     }
+  });
+
+  $('#interac, #stripe').on('click', function(evt) {
+    $('#interac, #stripe').addClass('disabled');
+
+    $('#thankyouPlaceholder').html(
+      `<div class="alert alert-success text-center" role="alert">
+         <h4>Thank you!</h4>
+         <p>Your participation supports "Keeping Girls in Badminton".</p>
+       </div>`);
   });
 });
   </script>
