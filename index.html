@@ -22,43 +22,44 @@
         <button class="nav-link" id="agreement-tab" data-bs-toggle="tab" data-bs-target="#agreement-tab-pane" type="button" role="tab" aria-controls="agreement-tab-pane" aria-selected="false"><i class="bi bi-2-circle"></i> Agreement</button>
       </li>
       <li class="nav-item visually-hidden" role="presentation">
-        <button class="nav-link" id="participant-tab" data-bs-toggle="tab" data-bs-target="#participant-tab-pane" type="button" role="tab" aria-controls="participant-tab-pane" aria-selected="false"><i class="bi bi-3-circle"></i> Participant Information</button>
+        <button class="nav-link" id="member-info-tab" data-bs-toggle="tab" data-bs-target="#member-info-tab-pane" type="button" role="tab" aria-controls="member-info-tab-pane" aria-selected="false"><i class="bi bi-3-circle"></i> Member Information</button>
       </li>
       <li class="nav-item visually-hidden" role="presentation">
         <button class="nav-link" id="payment-tab" data-bs-toggle="tab" data-bs-target="#payment-tab-pane" type="button" role="tab" aria-controls="payment-tab-pane" aria-selected="false"><i class="bi bi-4-circle"></i> Payment</button>
       </li>
     </ul>
-    <form>
-      <div class="tab-content" id="profileContent">
-        <div class="tab-pane border p-2 fade show active" id="start-tab-pane" role="tabpanel" aria-labelledby="start-tab" tabindex="0">
 
-          <!-- process wizard -->
-          <div class="row mb-3">
-            <div class="col-sm-6 mb-3 mb-sm-0">
-              <div class="card text-center">
-                <img src="participant-silhouette.png" class="card-img-top">
-                <div class="card-body">
-                  <h5 class="card-title">Participant Sign-Up</h5>
-                  <p class="card-text">I am the participant and I am 18 or over.</p>
-                  <a id="participantSignup" href="#" class="btn btn-primary">Sign-Up</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="card text-center">
-                <img src="parent-silhouette.png" class="card-img-top">
-                <div class="card-body">
-                  <h5 class="card-title">Parent/Guardian Sign-Up</h5>
-                  <p class="card-text">I am a parent/guardian of a participant under 18.</p>
-                  <a id="parentSignup" href="#" class="btn btn-primary">Sign-Up</a>
-                </div>
+    <div class="tab-content" id="profileContent">
+      <div class="tab-pane border p-2 fade show active" id="start-tab-pane" role="tabpanel" aria-labelledby="start-tab" tabindex="0">
+
+        <!-- process wizard -->
+        <div class="row mb-3">
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card text-center">
+              <img src="participant-silhouette.png" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Participant Sign-Up</h5>
+                <p class="card-text">I am the participant and I am 18 or over.</p>
+                <a id="participantSignup" href="#" class="btn btn-primary">Sign-Up</a>
               </div>
             </div>
           </div>
-
+          <div class="col-sm-6">
+            <div class="card text-center">
+              <img src="parent-silhouette.png" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Parent/Guardian Sign-Up</h5>
+                <p class="card-text">I am a parent/guardian of a participant under 18.</p>
+                <a id="parentSignup" href="#" class="btn btn-primary">Sign-Up</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="tab-pane border p-2 fade" id="agreement-tab-pane" role="tabpanel" aria-labelledby="agreement-tab" tabindex="0">
 
+      </div>
+      <div class="tab-pane border p-2 fade" id="agreement-tab-pane" role="tabpanel" aria-labelledby="agreement-tab" tabindex="0">
+
+        <form id="terms-and-conditions">
           <h3>Terms and Conditions</h3>
 
           <div class="alert alert-warning" role="alert">
@@ -71,52 +72,21 @@
             </p>
           </div>
 
-          <p class="small"><i class="bi bi-asterisk required-field"></i> denotes a required field</p>
-
           <hr>
 
-          <div id="participantAcknowledgement">
+          <div class="participant-only" id="participantAcknowledgement">
             <p class="lead">
               This Agreement must be signed by the Participant (when the Participant is of the age of majority in his/her province of residence) priority to participation.
               The age of majority in the Province of Ontario is eighteen (18) years old.
               The Participant agrees to be bound by and acknowledges the terms set out in this Agreement.
             </p>
           </div>
-          <div class="visually-hidden" id="parentalConsent">
+          <div class="parent-only" id="parentalConsent">
             <p class="lead">
               This Agreement must be signed by the Participant’s parent/guardian (when the Participant is younger than the age of majority in his/her province of residence) prior to participation.
               The age of majority in the Province of Ontario is eighteen (18) years old.
               The Participant’s parent/guardian acknowledges and agrees to the terms on behalf of the Participant and references in this document to the Participant agreeing to or acknowledging a risk or term is understood to be referring to the Participant’s parent/guardian agreeing to or acknowledging the risk or term on behalf of the Participant.
             </p>
-
-            <div class="row g-3 mb-3">
-              <div class="col-md-6">
-                <div class="form-floating">
-                  <input type="text" class="form-control" id="parentGivenNamesInput" name="parentGivenNames" placeholder="Given Name" required>
-                  <label for="parentGivenNamesInput" class="form-label">Parent/Guardian's Given Name(s) <i class="bi bi-asterisk required-field"></i></label>
-                </div>
-                </div>
-                <div class="col-md-6">
-                <div class="form-floating">
-                  <input type="text" class="form-control" id="parentFamilyNamesInput" name="parentFamilyNames" placeholder="Family Name" required>
-                  <label for="parentFamilyNamesInput" class="form-label">Family Name(s) (or Surname) <i class="bi bi-asterisk required-field"></i></label>
-                </div>
-              </div>
-            </div>
-            <div class="row g-3 mb-3">
-              <div class="col-md-3">
-                <div class="form-floating">
-                  <input type="text" class="form-control" id="parentPhoneInput" name="parentPhone" placeholder="416-555-1212" required>
-                  <label for="parentPhoneInput" class="form-label">Phone <i class="bi bi-asterisk required-field"></i></label>
-                </div>
-              </div>
-              <div class="col-md-9">
-                <div class="form-floating">
-                  <input type="text" class="form-control" id="parentEmailInput" name="parentEmail" placeholder="test@example.com" required>
-                  <label for="parentEmailInput" class="form-label">Email <i class="bi bi-asterisk required-field"></i></label>
-                </div>
-              </div>
-            </div>
           </div>
 
           <!-- copy/pasted from https://badmintonontario.ca/wp-content/uploads/2020/09/BON-Registration-Form-Version-4-Final.pdf -->
@@ -344,7 +314,7 @@
             <p class="small">
               I recognize that if I am under the age of 26 years old, I must review the following Concussion Awareness resources at
               least once a year:
-              <ul>
+              <ul class="small">
                 <li><a class="link icon-link" href="https://www.ontario.ca/page/ontario-government-concussion-awareness-resource-e-booklet-ages-10-and-under" target="_blank">Ages 10 and under <i class="bi bi-link-45deg"></i></a></li>
                 <li><a class="link icon-link" href="https://www.ontario.ca/page/ontario-government-concussion-awareness-resource-e-booklet-ages-11-14" target="_blank">Ages 11-14 <i class="bi bi-link-45deg"></i></a></li>
                 <li><a class="link icon-link" href="https://www.ontario.ca/page/ontario-government-concussion-awareness-resource-e-booklet-ages-15-and-up" target="_blank">Ages 15+ <i class="bi bi-link-45deg"></i></a></li>
@@ -394,6 +364,9 @@
 
           <div class="mb-3">
             <h5>Acceptance of Terms and Conditions</h5>
+
+            <p class="small"><i class="bi bi-asterisk required-field"></i> denotes a required field</p>
+
             <p class="small">
               The Participant (and the Participant’s parent/guardian, if applicable) pledges that they will abide by all applicable
               policies of the Club, PSO, and Badminton Canada. The Participant (and the Participant’s parent/guardian, if applicable)
@@ -408,21 +381,52 @@
             -->
           </div>
 
+          <div class="row g-3 mb-3 parent-only">
+            <div class="col-md-6">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="parentGivenNamesInput" name="parentGivenNames" placeholder="Given Name" required>
+                <label for="parentGivenNamesInput" class="form-label">Parent/Guardian's Given Name(s) <i class="bi bi-asterisk required-field"></i></label>
+              </div>
+              </div>
+              <div class="col-md-6">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="parentFamilyNamesInput" name="parentFamilyNames" placeholder="Family Name" required>
+                <label for="parentFamilyNamesInput" class="form-label">Family Name(s) (or Surname) <i class="bi bi-asterisk required-field"></i></label>
+              </div>
+            </div>
+          </div>
+          <div class="row g-3 mb-3 parent-only">
+            <div class="col-md-3">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="parentPhoneInput" name="parentPhone" placeholder="416-555-1212" required>
+                <label for="parentPhoneInput" class="form-label">Phone <i class="bi bi-asterisk required-field"></i></label>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="parentEmailInput" name="parentEmail" placeholder="test@example.com" required>
+                <label for="parentEmailInput" class="form-label">Email <i class="bi bi-asterisk required-field"></i></label>
+              </div>
+            </div>
+          </div>
+
           <div class="form-check mb-3">
-            <input class="form-check-input" type="checkbox" value="1" id="agree2Checkbox" name="agree2">
-            <label class="form-check-label" for="agree2Checkbox">I have read and agree to the Terms and Conditions <i class="bi bi-asterisk required-field"></i></label>
+            <input class="form-check-input" type="checkbox" value="1" id="agreeCheckbox" name="agree" required>
+            <label class="form-check-label" for="agreeCheckbox">I have read and agree to the Terms and Conditions <i class="bi bi-asterisk required-field"></i></label>
           </div>
 
           <div class="row g-3 mb-3">
             <div class="col-auto">
               <a id="cancelAgreement" href="#" class="btn btn-danger">Cancel</a>
-              <a id="nextProfile" href="#" class="btn btn-primary">Next</a>
+              <button id="nextProfile" class="btn btn-primary" type="submit">Next</button>
             </div>
           </div>
+        </form>
 
-        </div>
-        <div class="tab-pane border p-2 fade" id="participant-tab-pane" role="tabpanel" aria-labelledby="participant-tab" tabindex="0">
+      </div>
+      <div class="tab-pane border p-2 fade" id="member-info-tab-pane" role="tabpanel" aria-labelledby="member-info-tab" tabindex="0">
 
+        <form id="member-info">
           <p class="small"><i class="bi bi-asterisk required-field"></i> denotes a required field</p>
 
           <div class="row g-3 mb-3">
@@ -752,13 +756,13 @@
             <div class="col-md-3">
               <div class="form-floating">
                 <input type="text" class="form-control" id="phoneInput" name="phone" placeholder="416-555-1212">
-                <label for="phoneInput" class="form-label">Phone <span class="visually-hidden"><i class="bi bi-asterisk required-field"></i></span></label>
+                <label for="phoneInput" class="form-label">Phone <span class="participant-only"><i class="bi bi-asterisk required-field"></i></span></label>
               </div>
             </div>
             <div class="col-md-9">
               <div class="form-floating">
                 <input type="text" class="form-control" id="emailInput" name="email" placeholder="test@@example.com">
-                <label for="emailInput" class="form-label">Email <span class="visually-hidden"><i class="bi bi-asterisk required-field"></i></span></label>
+                <label for="emailInput" class="form-label">Email <span class="participant-only"><i class="bi bi-asterisk required-field"></i></span></label>
               </div>
             </div>
           </div>
@@ -796,42 +800,41 @@
           <div class="row g-3 mb-3">
             <div class="col-auto">
               <a id="cancelProfile" href="#" class="btn btn-danger">Cancel</a>
-              <a id="nextPayment" href="#" class="btn btn-primary">Next</a>
+              <button id="nextPayment" class="btn btn-primary" type="submit">Next</button>
             </div>
           </div>
+        </form>
 
-        </div>
-        <div class="tab-pane border p-2 fade" id="payment-tab-pane" role="tabpanel" aria-labelledby="payment-tab" tabindex="0">
-
-          <p class="lead">Your information has been saved. To complete registration, please select one of the following payment options.</p>
-
-          <div class="row mb-3">
-            <div class="col-sm-6 mb-3 mb-sm-0">
-              <div class="card text-center">
-                <div class="card-body">
-                  <h5 class="card-title">Interac e-Transfer</h5>
-                  <p class="card-text">I will send $111.87 ($99 + HST) via Interac e-Transfer to info@example.ca</p>
-                  <a id="interac" href="#" class="btn btn-primary">Send me a Request for Money</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="card text-center">
-                <div class="card-body">
-                  <h5 class="card-title">Credit Card</h5>
-                  <p class="card-text">Please charge $115.23 ($99 + HST + 3% processing fee) to my credit card.</p>
-                  <a id="stripe" href="#" class="btn btn-primary">Send me a (Stripe Payment) Invoice</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div id="thankyouPlaceholder"></div>
-
-        </div>
       </div>
-    </form>
+      <div class="tab-pane border p-2 fade" id="payment-tab-pane" role="tabpanel" aria-labelledby="payment-tab" tabindex="0">
 
+        <p class="lead">Your information has been saved. To complete registration, please select one of the following payment options.</p>
+
+        <div class="row mb-3">
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card text-center">
+              <div class="card-body">
+                <h5 class="card-title">Interac e-Transfer</h5>
+                <p class="card-text">I will send $111.87 ($99 + HST) via Interac e-Transfer to info@example.ca</p>
+                <a id="interac" href="#" class="btn btn-primary">Send me a Request for Money</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card text-center">
+              <div class="card-body">
+                <h5 class="card-title">Credit Card</h5>
+                <p class="card-text">Please charge $115.23 ($99 + HST + 3% processing fee) to my credit card.</p>
+                <a id="stripe" href="#" class="btn btn-primary">Send me a (Stripe Payment) Invoice</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="thankyouPlaceholder"></div>
+
+      </div>
+    </div>
   </div>
 
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasPronouns" aria-labelledby="Pronouns">
@@ -923,54 +926,56 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script>
 $(document).ready(function() {
-  $('#participantSignup').on('click', function(evt) {
-    // parental release should not be visible
+  $('#participantSignup').on('click', function(event) {
     $('#agreement-tab').parent().removeClass('visually-hidden');
     $('#agreement-tab').click();
-    $('#participantAcknowledgement').removeClass('visually-hidden');
-    $('#parentalConsent').removeClass('visually-hidden').addClass('visually-hidden');
+
+    $('.parent-only').addClass('visually-hidden');
+    $('.participant-only').removeClass('visually-hidden');
+    $('.parent-only input').prop('required', false);
+
     // participant phone/email are required
     $('#phoneInput').prop('required', true);
     $('#emailInput').prop('required', true);
-    $('#phoneInput ~ label span').removeClass('visually-hidden');
-    $('#emailInput ~ label span').removeClass('visually-hidden');
   });
 
-  $('#parentSignup').on('click', function(evt) {
-    // parental release should be visible
+  $('#parentSignup').on('click', function(event) {
     $('#agreement-tab').parent().removeClass('visually-hidden');
     $('#agreement-tab').click();
-    $('#participantAcknowledgement').removeClass('visually-hidden').addClass('visually-hidden');
-    $('#parentalConsent').removeClass('visually-hidden');
+
+    $('.parent-only').removeClass('visually-hidden');
+    $('.participant-only').addClass('visually-hidden');
+    $('.parent-only input').prop('required', true);
+
     // participant phone/email are optional
     $('#phoneInput').prop('required', false);
     $('#emailInput').prop('required', false);
-    $('#phoneInput ~ label span').removeClass('visually-hidden').addClass('visually-hidden');
-    $('#emailInput ~ label span').removeClass('visually-hidden').addClass('visually-hidden');
   });
 
-  $('#cancelAgreement').on('click', function(evt) {
+  $('#cancelAgreement').on('click', function(event) {
     $('#agreement-tab').parent().addClass('visually-hidden');
     $('#start-tab').click();
   });
 
-  $('#nextProfile').on('click', function(evt) {
-    $('#participant-tab').parent().removeClass('visually-hidden');
-    $('#participant-tab').click();
+  $('#terms-and-conditions').on('submit', function(event) {
+    $('#member-info-tab').parent().removeClass('visually-hidden');
+    $('#member-info-tab').click();
+    event.preventDefault();
   });
 
-  $('#cancelProfile').on('click', function(evt) {
+  $('#cancelProfile').on('click', function(event) {
     $('#agreement-tab').parent().addClass('visually-hidden');
-    $('#participant-tab').parent().addClass('visually-hidden');
+    $('#member-info-tab').parent().addClass('visually-hidden');
     $('#start-tab').click();
   });
 
-  $('#nextPayment').on('click', function(evt) {
+  $('#member-info').on('submit', function(event) {
     $('#payment-tab').parent().removeClass('visually-hidden');
     $('#payment-tab').click();
+    event.preventDefault();
   });
 
-  $('#genderSelect').on('change', function(evt) {
+  $('#genderSelect').on('change', function(event) {
     if ($('#genderSelect')[0].value == 'O') {
       $('#genderInput').prop('disabled', false);
       $('#genderInput').focus();
@@ -979,7 +984,7 @@ $(document).ready(function() {
     }
   });
 
-  $('#interac, #stripe').on('click', function(evt) {
+  $('#interac, #stripe').on('click', function(event) {
     $('#interac, #stripe').addClass('disabled');
 
     $('#thankyouPlaceholder').html(
