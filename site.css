@@ -2,6 +2,10 @@
   list-style-type: lower-roman;
 }
 
+.list-lower-alpha {
+  list-style-type: lower-alpha;
+}
+
 i.required-field {
   color: red;
 }

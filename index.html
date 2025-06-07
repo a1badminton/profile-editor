@@ -19,7 +19,7 @@
         <button class="nav-link active" id="start-tab" data-bs-toggle="tab" data-bs-target="#start-tab-pane" type="button" role="tab" aria-controls="start-tab-pane" aria-selected="true"><i class="bi bi-1-circle"></i> Start</button>
       </li>
       <li class="nav-item visually-hidden" role="presentation">
-        <button class="nav-link" id="agreements-tab" data-bs-toggle="tab" data-bs-target="#agreements-tab-pane" type="button" role="tab" aria-controls="agreements-tab-pane" aria-selected="false"><i class="bi bi-2-circle"></i> Agreements</button>
+        <button class="nav-link" id="agreement-tab" data-bs-toggle="tab" data-bs-target="#agreement-tab-pane" type="button" role="tab" aria-controls="agreement-tab-pane" aria-selected="false"><i class="bi bi-2-circle"></i> Agreement</button>
       </li>
       <li class="nav-item visually-hidden" role="presentation">
         <button class="nav-link" id="participant-tab" data-bs-toggle="tab" data-bs-target="#participant-tab-pane" type="button" role="tab" aria-controls="participant-tab-pane" aria-selected="false"><i class="bi bi-3-circle"></i> Participant Information</button>
@@ -57,34 +57,36 @@
           </div>
 
         </div>
-        <div class="tab-pane border p-2 fade" id="agreements-tab-pane" role="tabpanel" aria-labelledby="agreements-tab" tabindex="0">
+        <div class="tab-pane border p-2 fade" id="agreement-tab-pane" role="tabpanel" aria-labelledby="agreement-tab" tabindex="0">
 
-          <h4>User Undertaking and Agreement</h4>
+          <h3>Terms and Conditions</h3>
 
           <div class="alert alert-warning" role="alert">
             <h4><i class="bi bi-exclamation-triangle-fill"></i> Please read carefully!</h4>
             <p class="mb-0">
-              These are legally binding agreements. You are advised to clarify any questions or concerns before agreeing to be bound by these agreements.
+              This is a legally binding agreement. You are advised to clarify any questions or concerns before agreeing to be bound by this agreement.
               For participants under the age of 18, a parent or guardian must provide permission to continue.
-              In general, these agreements shall apply to all subsequent membership renewals.
-              Upon reaching the age of majority, participants will be asked to reaffirm the agreements.
+              In general, this agreement shall apply to all subsequent membership renewals.
+              Upon reaching the age of majority, participants will be asked to reaffirm the agreement.
             </p>
           </div>
 
           <p class="small"><i class="bi bi-asterisk required-field"></i> denotes a required field</p>
 
-          <div class="visually-hidden" id="parentalConsent">
-            <hr>
+          <hr>
 
+          <div id="participantAcknowledgement">
             <p class="lead">
-              This Agreement must be signed by the Participant and/or the Participant’s parent/guardian (if
-              applicable, when the Participant is younger than the age of majority in his/her province of
-              residence) prior to participation. The age of majority in the Province of Ontario is eighteen (18)
-              years old. The Participant agrees to be bound by and acknowledges the terms set out in this
-              Agreement . When applicable, the Participant’s parent/guardian acknowledges and agrees to
-              the terms on behalf of the Participant and references in this document to the Participant
-              agreeing to or acknowledging a risk or term is understood to be referring to the Participant’s
-              parent/guardian agreeing to or acknowledging the risk or term on behalf of the Participant.
+              This Agreement must be signed by the Participant (when the Participant is of the age of majority in his/her province of residence) priority to participation.
+              The age of majority in the Province of Ontario is eighteen (18) years old.
+              The Participant agrees to be bound by and acknowledges the terms set out in this Agreement.
+            </p>
+          </div>
+          <div class="visually-hidden" id="parentalConsent">
+            <p class="lead">
+              This Agreement must be signed by the Participant’s parent/guardian (when the Participant is younger than the age of majority in his/her province of residence) prior to participation.
+              The age of majority in the Province of Ontario is eighteen (18) years old.
+              The Participant’s parent/guardian acknowledges and agrees to the terms on behalf of the Participant and references in this document to the Participant agreeing to or acknowledging a risk or term is understood to be referring to the Participant’s parent/guardian agreeing to or acknowledging the risk or term on behalf of the Participant.
             </p>
 
             <div class="row g-3 mb-3">
@@ -117,82 +119,298 @@
             </div>
           </div>
 
-          <p class="lead">
-          </p>
+          <!-- copy/pasted from https://badmintonontario.ca/wp-content/uploads/2020/09/BON-Registration-Form-Version-4-Final.pdf -->
+          <div class="mb-3">
+            <h5>Membership and Annual License</h5>
+            <p class="small">
+              The Participant is voluntarily participating in the sport of badminton and the spectating, orientation, instruction,
+              activities, competitions, programs, and services (collectively the “Activities”) of the Club, the PSO, and/or Badminton
+              Canada (“collectively the Organizations”).
+            </p>
+            <p class="small">
+              The Participant (and the Participant’s parent/guardian, if applicable) agrees that the Organizations have the discretion
+              to cancel any scheduled Activities. The Organizations have no responsibilities to the Participant (including refunding
+              registration fees or paying for any costs associated with travel) if an Activity is canceled or postponed by the
+              Organizations or for any other reason including a public health or safety issue.
+            </p>
+            <p class="small">
+              The Participant (and the Participant’s parent/guardian, if applicable) agrees that the Organizations have the discretion
+              to modify the structure of any Activities due to a public health or safety issue, which may include removing specific
+              disciplines or age groups from a competition, changing a competition format, or changing the manner in which
+              individuals become eligible to participate.
+            </p>
+            <p class="small">
+              The Participant (and the Participant’s parent/guardian, if applicable) agrees that the Organizations may implement and
+              enforce guidelines for participation that may include ‘Return to Play’ protocols or the wearing of personal protective
+              equipment by Participants (and their parents/guardians, if applicable). The Organizations have the discretion to remove
+              any Participant (and their parents/guardians, if applicable) who does not comply with the Return to Play protocols or
+              wear personal protective equipment. When required, the Participant is responsible for providing his or her own
+              personal protective equipment. All policies and Return to Play protocols are available on the PSO website at
+              <a class="link icon-link" href="https://www.badmintonontario.ca/by-laws-policies-agm-notes/" target="_blank">www.badmintonontario.ca <i class="bi bi-link-45deg"></i></a>.
+            </p>
+          </div>
 
-          <div class="accordion" id="membershipAccordion">
+          <div class="mb-3">
+            <h5>Consent for Use of Personal Information and Photo Release</h5>
+            <p class="small">
+              The Participant (and the Participant’s parent/guardian if applicable) authorize the Club, the PSO, and Badminton
+              Canada (collectively the “Organizations”) to collect and use personal information about the Participant for the purpose
+              of receiving communications and the purposes described in the <a class="link icon-link" href="https://www.badmintonontario.ca/wp-content/uploads/2020/08/BADMINTON-ONTARIO-Privacy-Policy.pdf" target="_blank">Organizations’ policies relating to privacy <i class="bi bi-link-45deg"></i></a>.
+            </p>
+            <p class="small">
+              The Participant (and the Participant’s parent/guardian, if applicable) grants permission to the Organizations to
+              photograph and/or record the Participant’s image and/or voice on still or motion picture film and/or audio tape, and to
+              use this material to promote the sport, the Organizations, and/or the Organizations’ Activities through social media,
+              newsletters, websites, television, film, radio, print and/or displays. The Participant (or the Participant’s
+              parent/guardian, if applicable) understands that they waive any claim to remuneration for use of audio/visual materials
+              used for these purposes. Permission may be withdrawn at any time by contacting the Organizations’ Privacy Officers.
+              The Privacy Officer will advise the implications of such withdrawal.
+            </p>
+          </div>
+
+          <div class="mb-3">
+            <h5>Waiver and Assumption of Risk</h5>
+            <p class="small">
+              If the Participant is older than the age of majority, the Participant has acknowledged the risks described in the
+              ASSUMPTION OF RISK AND WAIVER OF CLAIMS AND LIABILITY AGREEMENT. The Participant has agreed to
+              assume all risks arising out of, or associated with, the Participant’s participation and agrees to forever release the Club,
+              PSO, and Badminton Canada (collectively the “Organizations”) from all liability from any and all claims the Participant
+              may have including those that may be related to the Organizations’ negligence.
+            </p>
+            <p class="small">
+              If the Participant is younger than the age of majority, the Participant’s parent/guardian has acknowledged the risks
+              described in the ASSUMPTION OF RISK AND WAIVER OF CLAIMS AND LIABILITY AGREEMENT. The Participant’s
+              parent/guardian has agreed that they are informed about the risks and dangers to the Participant.
+            </p>
+          </div>
+
+          <div class="accordion mb-3" id="membershipAccordion">
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMembership" aria-expanded=true" aria-controls="collapseMembership">
-                  <h5>Assumption of Risk and Waiver of Claims and Liability</h5>
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMembership" aria-expanded="false" aria-controls="collapseMembership">
+                  <h5>Assumption of Risk and Waiver of Claims and Liability Agreement</h5>
                 </button>
               </h2>
-              <div id="collapseMembership" class="accordion-collapse collapse show" data-bs-parent="#membershipAccordion">
+              <div id="collapseMembership" class="accordion-collapse collapse" data-bs-parent="#membershipAccordion">
                 <div class="accordion-body">
-                  Copy and paste from https://badmintonontario.ca/wp-content/uploads/2020/09/BON-AoR-and-Waiver-of-Claims-Agreement-Version-3-Final.pdf
+                  <!-- mostly copy and pasted from https://badmintonontario.ca/wp-content/uploads/2020/09/BON-AoR-and-Waiver-of-Claims-Agreement-Version-3-Final.pdf;
+                       we can't reference it directly because it's no longer valid, due to this qualifier:
+                       "For participation in all Sanctioned Badminton Ontario activities and competitions occurring between September 1, 2020 and August 31, 2021" -->
+                  <h5>Activities</h5>
+                  <p class="small">
+                    The Participant warrants that the Participant is voluntarily participating in the sport of
+                    badminton and the spectating, orientation, instruction, activities, competitions, programs, and
+                    services (collectively the “Activities”) of Badminton World Federation, Badminton Canada,
+                    Badminton Ontario, the Provincial Sport Organization ("PSO") governing badminton in Ontario,
+                    and any affiliated Member club.
+                  </p>
+                  <p class="small">
+                    For further clarity, the PSO includes its Directors, Officers, committee members, members,
+                    employees, coaches, volunteers, officials, participants, agents, sponsors, owners/operators of
+                    the facilities in which the Activities take place, and representatives, and is not responsible
+                    for any injury, personal injury, damage, property damage, expense, loss of income or loss of
+                    any kind suffered by a Participant during or as a result of the Activities, even when caused by
+                    the negligence of the PSO.
+                  </p>
+                  <h5>Risks</h5>
+                  <p class="small">
+                    The Activities have foreseeable and unforeseeable inherent risks, hazards and dangers that no
+                    amount of care, caution or expertise can eliminate, including without limitation, the potential
+                    for serious bodily injury, permanent disability, paralysis, and loss of life. These risks include but
+                    are not limited to:
+                    <ol class="small list-lower-alpha">
+                      <li>Executing strenuous and demanding physical techniques;</li>
+                      <li>Vigorous physical exertion, strenuous cardiovascular workouts and rapid movements;</li>
+                      <li>Exerting and stretching various muscle groups;</li>
+                      <li>The failure to properly use any piece of equipment or from the mechanical failure of any
+                          piece of equipment;</li>
+                      <li>Spinal cord injuries which may render the Participant permanently paralyzed;</li>
+                      <li>Serious injury to virtually all bones, joints, ligaments, muscles, tendons and other aspects of
+                          the Participant’s body or to the Participant’s general health and well-being;</li>
+                      <li>Abrasions, sprains, strains, fractures, or dislocations;</li>
+                      <li>Concussion or other head injuries, including but not limited to, closed head injury or blunt
+                          head trauma;</li>
+                      <li>Physical contact with other participants, spectators, equipment, and hazards;</li>
+                      <li>Contact with a racquet, shuttlecock, net, or the court;</li>
+                      <li>Not wearing appropriate safety or protective equipment;</li>
+                      <li>Failure to act safely or within the Participant’s own ability or within designated areas;</li>
+                      <li>Travel to and from competitive events and associated non-competitive events which are an
+                          integral part of the Activities;</li>
+                      <li>Exposure to disease including COVID-19 and other contagious illnesses.</li>
+                    </ol>
+                  </p>
+                  <p class="small">The PSO may offer or promote online programming (such as webinars, remote conferences,
+                    workshops, and online training) which have some different foreseeable and unforeseeable risks
+                    than in-person programming. These risks include but are not limited to privacy breaches,
+                    hacking, technology malfunction or damage.
+                  </p>
+                  <!--
+                  <p class="small">
+                    The novel coronavirus, COVID-19, has been declared a worldwide pandemic by the World Health
+                    Organization and COVID-19 is extremely contagious. The PSO has put in place preventative
+                    measures to reduce the spread of COVID-19; however, the PSO cannot guarantee that the
+                    Participant will not become infected with COVID-19. Further, participating in the Activities could
+                    increase the Participant’s risk of contracting COVID-19 or any other contagious disease.
+                  </p>
+                  <p class="small">
+                    While the PSO will use every best effort to demonstrate and implement reasonable precautions
+                    to protect Participants, there is no guarantee that every situation involving risk to a Participant
+                    can be avoided when participating in activities delivered by the PSO.
+                  </p>
+                  -->
+                  <h5>Terms</h5>
+                  <p class="small">
+                    In consideration of the PSO allowing the Participant to participate in the Activities, the
+                    Participant (or the Participant’s parent/guardian, if applicable) agrees:
+                    <ol class="small list-lower-alpha">
+                      <li>That the Participant is not relying on any oral or written statements made by the PSO or
+                          their agents, contained in any medium, including but not limited to a brochure or
+                          advertisement or in individual conversations, to agree to participate in the Activities;</li>
+                      <li>That when the Participant practices or trains in their own space, the Participant is
+                          responsible for the Participant’s surroundings and the location and equipment that is
+                          selected for the Participant;</li>
+                      <li>That the Participant’s mental and physical condition is appropriate to participate in the
+                          Activities and the Participant assumes all risks related to the Participant’s mental and
+                          physical condition;</li>
+                      <li>To comply with the rules and regulations for participation in the Activities as outlined in the
+                          regulation section of each Activity; extending to and including additional health and safety
+                          practices as required by the PSO;</li>
+                      <li>To comply with the rules of the facility and use all equipment properly and for its intended
+                          purpose only;</li>
+                      <li>That if the Participant observes an unusual significant hazard or risk, the Participant will
+                          remove themselves from participation and immediately bring their observations to a
+                          representative of the PSO;</li>
+                      <li>The risks associated with the Activities are increased when the Participant is impaired and
+                          the Participant will not participate if impaired in any way;</li>
+                      <li>That it is the Participant’s sole responsibility to assess whether any Activities are beyond the
+                          skill level of the Participant. By the Participant commencing an Activity, the Participant
+                          acknowledges and accepts the suitability and conditions of the Activity as measured against
+                          the skills of the Participant;</li>
+                      <!--
+                      <li>That COVID-19 is contagious in nature and the Participant may be exposed to, or infected
+                          by, COVID-19 and such exposure may result in personal injury, illness, permanent disability,
+                          or death; and</li>
+                      -->
+                      <li>That the Participant is responsible for choosing the Participant’s safety or protective
+                          equipment and the secure fitting of that equipment.</li>
+                    </ol>
+                  </p>
+                  <h5>Disclaimer</h5>
+                  <p class="small">
+                    The Participant (or the Participant’s parent/guardian, if applicable) assumes all risks arising out
+                    of, associated with or related to, participation in the Activities and waives any and all claims that
+                    the Participant may have now or in the future against the PSO. The Participant, when the age of
+                    majority or older, accepts and fully assumes all such risks and possibility of personal injury,
+                    death, property damage, expense and related loss, including loss of income, resulting from
+                    participation in the Activities.
+                  </p>
+                  <p class="small">
+                    The Participant (when 18 years old or older) forever releases and indemnifies the PSO from any
+                    and all liability for any and all claims, demands, actions, damages (including direct, indirect,
+                    special and/or consequential), losses, actions, judgments, and costs (including legal fees)
+                    (collectively, the “Claims”) which the Participant has or may have in the future, that might arise
+                    out of, result from, or relate to, participation in the Activities, even though such Claims may
+                    have been caused by any manner whatsoever, including but not limited to, the PSO’s
+                    negligence, gross negligence, negligent rescue, omissions, carelessness, breach of contract
+                    and/or breach of any statutory duty of care of the PSO.
+                  </p>
+                  <p class="small">
+                    The PSO is not responsible or liable for any damage to the Participant’s vehicle, property, or
+                    equipment that may occur as a result of the Activities. This Agreement is governed by the laws
+                    of the Province of Ontario and if any portion thereof is held invalid, the balance shall,
+                    notwithstanding, continue in full legal force and effect. Notwithstanding the waiver of Claims as
+                    set out above, the Participant (or the Participant’s parent/guardian, if applicable) agrees to file
+                    any proceeding against the PSO in the Province of Ontario and further agrees that the
+                    substantive law of the Province of Ontario will apply with regard to conflict of law rules
+                  </p>
+                  <h5>Acknowledgement</h5>
+                  <p class="small">
+                    The Participant (and the Participant’s parent/guardian, if applicable) acknowledges that they
+                    have read and understand this agreement, that they have executed this agreement voluntarily,
+                    and that this agreement is to be binding upon themselves, their heirs, spouse, children, parents,
+                    guardians, next of kin, executors, administrators and legal or personal representatives. It is
+                    further acknowledged that by signing this agreement the Participant (when 18 years old or
+                    older) has waived the right to maintain a lawsuit against the PSO on the basis of any claims from
+                    which they have released herein.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="border">
-            In layman terms, ...
+
+          <!-- copy/pasted from https://badmintonontario.ca/wp-content/uploads/2020/09/BON-Registration-Form-Version-4-Final.pdf -->
+          <div class="mb-3">
+            <h5>Concussion Awareness Resources</h5>
+            <p class="small">
+              I recognize that if I am under the age of 26 years old, I must review the following Concussion Awareness resources at
+              least once a year:
+              <ul>
+                <li><a class="link icon-link" href="https://www.ontario.ca/page/ontario-government-concussion-awareness-resource-e-booklet-ages-10-and-under" target="_blank">Ages 10 and under <i class="bi bi-link-45deg"></i></a></li>
+                <li><a class="link icon-link" href="https://www.ontario.ca/page/ontario-government-concussion-awareness-resource-e-booklet-ages-11-14" target="_blank">Ages 11-14 <i class="bi bi-link-45deg"></i></a></li>
+                <li><a class="link icon-link" href="https://www.ontario.ca/page/ontario-government-concussion-awareness-resource-e-booklet-ages-15-and-up" target="_blank">Ages 15+ <i class="bi bi-link-45deg"></i></a></li>
+              </ul>
+            </p>
+            <p class="small">
+              I recognize that Parents/Guardians of participants under 18 years old, and coaches and trainers who are interacting
+              with athletes under the age of 26 years old, and tournament officials must also review the Concussion Awareness
+              resources.
+            </p>
+            <p class="small">
+              By executing this Registration Form, I certify for myself and/or on behalf of my participant who is under 18 years old,
+              that the Concussion Awareness resources available on the Badminton Ontario and the Coaches Association of Ontario
+              website have been reviewed.
+            </p>
           </div>
 
-          <p class="lead">IN CONSIDERATION OF ACCEPTANCE OF MY USE OF THIS SERVICE with Badminton Ontario, I, intending to be legally bound, do hereby, for myself, my heirs, executors and administrators, parents or guardians:</p>
-          <ol class="list-lower-roman">
-            <li>waive and release and forever discharge any and all rights and claims for damage which I may have or may hereafter accrue to me against Badminton Ontario, Badminton Canada, Badminton World Federation, any Member Club or their respective officers, agents, representatives, employees, volunteers and/or assigns for any damages which may arise out of my travelling to or participating in and returning from any badminton event, function or event;</li>
-            <li>consent and grant permission to Badminton Ontario to provide my personal and identifiable information to Badminton Canada for administration of the national membership system and other Badminton Canada managed programs;</li>
-            <li>consent and grant permission in perpetuity and for any and all purposes to Badminton Ontario, Badminton Canada, the organizers of the tournament or its or their respective officers, agents, representatives employees, volunteers and/or assigns to use (without, for greater certainty, any further consent or fee being required) any photograph, videotape or other electronic recording device of my image taken, filmed or recorded during, or in connection with my participation in any Badminton Ontario and/or Badminton Canada match, function or event, for any promotional, news or other purpose and</li>
-            <li>Badminton Ontario and/or Badminton Canada may use contact information collected from me including my name, email address, address and telephone number for the purpose of providing me with information relating to activities, events, news or Badminton Ontario and/or Badminton Canada approved 3rd party offers. I may choose to opt out of this approval at anytime and am in no way obligated to receive this information in order to participate in any event, service or undertaking provided by Badminton Ontario and/or Badminton Canada in which I am entitled to participate.</li>
-          </ol>
-          <p>Furthermore, I agree that I have read and accept the provisions, where applicable, to the <a class="link icon-link" href="https://www.badminton.ca/file/821889/?dl=1">Badminton Canada Privacy Policy <i class="bi bi-link-45deg"></i></a> as posted on the Badminton Canada Website (www.badminton.ca).</p>
-
-          <div class="form-check mb-3">
-            <input class="form-check-input" type="checkbox" value="1" id="agreeCheckbox" name="agree">
-            <label class="form-check-label" for="agreeCheckbox">I agree to these Rules &amp; Regulations.</label>
+          <div class="mb-3">
+            <h5>Status of Activities</h5>
+            <p class="small">
+              The Participant is voluntarily participating in the sport of badminton and the spectating, orientation, instruction,
+              activities, competitions, programs, and services (collectively the “Activities”) of the Club, the PSO, and/or Badminton
+              Canada (“collectively the Organizations”).
+            </p>
+            <p class="small">
+              The Participant (and the Participant’s parent/guardian, if applicable) agrees that the Organizations have the discretion
+              to cancel any scheduled Activities. The Organizations have no responsibilities to the Participant (including refunding
+              registration fees or paying for any costs associated with travel) if an Activity is canceled or postponed by the
+              Organizations or for any other reason including a public health or safety issue.
+            </p>
+            <p class="small">
+              The Participant (and the Participant’s parent/guardian, if applicable) agrees that the Organizations have the discretion
+              to modify the structure of any Activities due to a public health or safety issue, which may include removing specific
+              disciplines or age groups from a competition, changing a competition format, or changing the manner in which
+              individuals become eligible to participate.
+            </p>
+            <p class="small">
+              The Participant (and the Participant’s parent/guardian, if applicable) agrees that the Organizations may implement and
+              enforce guidelines for participation that may include ‘Return to Play’ protocols or the wearing of personal protective
+              equipment by Participants (and their parents/guardians, if applicable). The Organizations have the discretion to remove
+              any Participant (and their parents/guardians, if applicable) who does not comply with the Return to Play protocols or
+              wear personal protective equipment. When required, the Participant is responsible for providing his or her own
+              personal protective equipment. All policies and Return to Play protocols are available on the PSO website at
+              <a class="link icon-link" href="https://www.badmintonontario.ca/by-laws-policies-agm-notes/" target="_blank">www.badmintonontario.ca <i class="bi bi-link-45deg"></i></a>.
+            </p>
           </div>
 
-          <hr>
-          <!-- Pickleball Canada -->
-
-          <h4>RELEASE AGREEMENT</h4>
-
-          <p class="lead">RELEASE OF LIABILITY, WAIVER OF CLAIMS, ASSUMPTION OF RISKS AND INDEMNITY AGREEMENT(hereinafter referred to as the "Release Agreement")</p>
-
-          <p><strong>PLEASE READ CAREFULLY!</strong></p>
-          <p>This Release Agreement shall apply to all subsequent membership renewals.</p>
-
-          <p>BY SIGNING THIS DOCUMENT YOU WILL WAIVE OR GIVE UP CERTAIN LEGAL RIGHTS, INCLUDING THE RIGHT TO SUE OR CLAIM COMPENSATION FOLLOWING AN ACCIDENT</p>
-
-          <p>TO: PICKLEBALL CANADA ORGANIZATION, and its affiliated provinces and territories and its local associations and clubs, and their respective directors, officers, employees, instructors, agents, representatives, volunteers, independent contractors, subcontractors, sponsors, successors and assigns (hereinafter collectively referred to as the "Releasees").</p>
-
-          <h5>ASSUMPTION OF RISKS</h5>
-
-          <p>I am aware that participating in the sport of pickleball involves many risks, dangers and hazards including, but not limited to: collision with other persons or objects; being struck by a paddle; being hit by a ball; the risk of stroke, heart attack or other similar life threatening conditions caused by physical exertion; the risk of personal injury including, but not limited to, strains, sprains, fractures, brain injury, spinal cord injury including paraplegia or quadriplegia, or death; loss of balance or control; slips, trips and falls; negligent first aid; failure to act safely or within one’s own ability; negligence of other persons; and, NEGLIGENCE ON THE PART OF THE RELEASEES. I UNDERSTAND THAT NEGLIGENCE INCLUDES FAILURE ON THE PART OF THE RELEASEES TO TAKE REASONABLE STEPS TO SAFEGUARD OR PROTECT ME FROM THE RISKS, DANGERS AND HAZARDS REFERRED TO ABOVE. I FREELY ACCEPT AND FULLY ASSUME ALL SUCH RISKS, DANGERS AND HAZARDS AND THE POSSIBILITY OF PERSONAL INJURY, DEATH, OR PROPERTY DAMAGE OR LOSS RESULTING THEREFROM.</p>
-
-          <h5>RELEASE OF LIABILITY, WAIVER OF CLAIMS AND INDEMNITY AGREEMENT</h5>
-
-          <p>In consideration of the Releasees accepting my application for membership in the Pickleball Canada Organization and, as applicable, my affiliated province or territory and local association or club, and permitting my use of the facilities and premises provided by the Releasees (hereinafter "the premises"), I hereby agree as follows:</p>
-
-          <ol>
-            <li>TO WAIVE ANY AND ALL CLAIMS that I have or may in the future have against THE RELEASEES, and TO RELEASE THE RELEASEES from any and all liability for any loss, damage, expense or injury including death that I may suffer, or that my next of kin may suffer, as a result of my participation in the sport of pickleball including, but not limited to, my use of the premises DUE TO ANY CAUSE WHATSOEVER, INCLUDING NEGLIGENCE, BREACH OF CONTRACT, OR BREACH OF ANY STATUTORY OR OTHER DUTY OF CARE, INCLUDING ANY DUTY OF CARE OWED UNDER ANY PROVINCIAL OCCUPIERS’ LIABILITY LEGISLATION ON THE PART OF THE RELEASEES. I UNDERSTAND THAT NEGLIGENCE INCLUDES THE FAILURE ON PART OF THE RELEASEES TO TAKE REASONABLE STEPS TO SAFEGUARD OR PROTECT ME FROM THE RISKS, DANGERS AND HAZARDS REFERRED TO ABOVE.</li>
-
-            <li>TO HOLD HARMLESS AND INDEMNIFY THE RELEASEES from any and all liability for any damage to property of or personal injury to any third party, resulting from my use of or presence on the premises;</li>
-
-            <li>This Release Agreement shall be effective and binding upon my heirs, next of kin, executors, administrators, assigns and representatives, in the event of my death or incapacity;</li>
-
-            <li>This Release Agreement and any rights, duties and obligations as between the parties to this Release Agreement shall be governed by and interpreted solely in accordance with the laws of the Province of Ontario and no other jurisdiction; and</li>
-
-            <li>Any litigation involving the parties to this Release Agreement shall be brought solely within the Province of Ontario, and shall be within the exclusive jurisdiction of the Courts of the Province of Ontario.</li>
-          </ol>
-
-          <p>In entering into this Release Agreement I am not relying upon any oral or written representations or statements made by the Releasees with respect to the safety of pickleball other than what is set forth in this Agreement.</p>
-
-          <p>I HAVE READ AND UNDERSTAND THIS RELEASE AGREEMENT AND I AM AWARE THAT BY SIGNING THIS AGREEMENT I AM WAIVING CERTAIN LEGAL RIGHTS WHICH I OR MY HEIRS, NEXT OF KIN, EXECUTORS, ADMINISTRATORS, ASSIGNS AND REPRESENTATIVES MAY HAVE AGAINST THE RELEASEES.</p>
+          <div class="mb-3">
+            <h5>Acceptance of Terms and Conditions</h5>
+            <p class="small">
+              The Participant (and the Participant’s parent/guardian, if applicable) pledges that they will abide by all applicable
+              policies of the Club, PSO, and Badminton Canada. The Participant (and the Participant’s parent/guardian, if applicable)
+              acknowledges that they have read this document in its entirety, provided accurate personal information, and have
+              agreed to the terms and conditions above.
+            </p>
+            <!--
+            <p class="small">
+              By clicking the box below, the name of the Participant below (and the name of the Participant’s parent/guardian, if
+              applicable), agrees to accept the terms and conditions described in this <a class="link icon-link" href="https://badmintonontario.ca/wp-content/uploads/2020/09/BON-Registration-Form-Version-4-Final.pdf" target="_blank">document <i class="bi bi-link-45deg"></i></a>.
+            </p>
+            -->
+          </div>
 
           <div class="form-check mb-3">
             <input class="form-check-input" type="checkbox" value="1" id="agree2Checkbox" name="agree2">
-            <label class="form-check-label" for="agree2Checkbox">I have read and agree to the above</label>
+            <label class="form-check-label" for="agree2Checkbox">I have read and agree to the Terms and Conditions</label>
           </div>
 
           <div class="row g-3 mb-3">
@@ -509,58 +727,6 @@
                   <option value="QC">Québec</option>
                   <option value="SK">Saskatchewan</option>
                   <option value="YT">Yukon Territory</option>
-                  <option disabled>------------</option>
-                  <option value="AK">Alaska</option>
-                  <option value="AL">Alabama</option>
-                  <option value="AR">Arkansas</option>
-                  <option value="AZ">Arizona</option>
-                  <option value="CA">California</option>
-                  <option value="CO">Colorado</option>
-                  <option value="CT">Connecticut</option>
-                  <option value="DC">District of Columbia</option>
-                  <option value="DE">Delaware</option>
-                  <option value="FL">Florida</option>
-                  <option value="GA">Georgia</option>
-                  <option value="HI">Hawaii</option>
-                  <option value="IA">Iowa</option>
-                  <option value="ID">Idaho</option>
-                  <option value="IL">Illinois</option>
-                  <option value="IN">Indiana</option>
-                  <option value="KS">Kansas</option>
-                  <option value="KY">Kentucky</option>
-                  <option value="LA">Louisiana</option>
-                  <option value="MA">Massachusetts</option>
-                  <option value="MD">Maryland</option>
-                  <option value="ME">Maine</option>
-                  <option value="MI">Michigan</option>
-                  <option value="MN">Minnesota</option>
-                  <option value="MO">Missouri</option>
-                  <option value="MS">Mississippi</option>
-                  <option value="MT">Montana</option>
-                  <option value="NC">North Carolina</option>
-                  <option value="ND">North Dakota</option>
-                  <option value="NE">Nebraska</option>
-                  <option value="NH">New Hampshire</option>
-                  <option value="NJ">New Jersey</option>
-                  <option value="NM">New Mexico</option>
-                  <option value="NV">Nevada</option>
-                  <option value="NY">New York</option>
-                  <option value="OH">Ohio</option>
-                  <option value="OK">Oklahoma</option>
-                  <option value="OR">Oregon</option>
-                  <option value="PA">Pennsylvania</option>
-                  <option value="RI">Rhode Island</option>
-                  <option value="SC">South Carolina</option>
-                  <option value="SD">South Dakota</option>
-                  <option value="TN">Tennessee</option>
-                  <option value="TX">Texas</option>
-                  <option value="UT">Utah</option>
-                  <option value="VA">Virginia</option>
-                  <option value="VT">Vermont</option>
-                  <option value="WA">Washington</option>
-                  <option value="WI">Wisconsin</option>
-                  <option value="WV">West Virginia</option>
-                  <option value="WY">Wyoming</option>
                 </select>
                 <label for="stateSelect" class="form-label">Province/Territory/State <i class="bi bi-asterisk required-field"></i></label>
               </div>
@@ -575,20 +741,26 @@
           <!-- todo: populate full list of countries -->
           <div class="form-floating mb-3">
             <select class="form-select" id="countrySelect" name="country" required aria-label="Country" placeholder="Country">
-              <option selected disabled>Choose ...</option>
-              <option value="CA">Canada</option>
+              <option disabled>Choose ...</option>
+              <option selected value="CA">Canada</option>
               <option value="US">United States</option>
             </select>
             <label for="countrySelect" class="form-label">Country <i class="bi bi-asterisk required-field"></i></label>
           </div>
 
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="phoneInput" name="phone" placeholder="416-555-1212">
-            <label for="phoneInput" class="form-label">Phone <span class="visually-hidden"><i class="bi bi-asterisk required-field"></i></span></label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="emailInput" name="email" placeholder="test@@example.com">
-            <label for="emailInput" class="form-label">Email <span class="visually-hidden"><i class="bi bi-asterisk required-field"></i></span></label>
+          <div class="row g-3 mb-3">
+            <div class="col-md-3">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="phoneInput" name="phone" placeholder="416-555-1212">
+                <label for="phoneInput" class="form-label">Phone <span class="visually-hidden"><i class="bi bi-asterisk required-field"></i></span></label>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="emailInput" name="email" placeholder="test@@example.com">
+                <label for="emailInput" class="form-label">Email <span class="visually-hidden"><i class="bi bi-asterisk required-field"></i></span></label>
+              </div>
+            </div>
           </div>
 
           <div class="row g-3 mb-3">
@@ -753,8 +925,9 @@
 $(document).ready(function() {
   $('#participantSignup').on('click', function(evt) {
     // parental release should not be visible
-    $('#agreements-tab').parent().removeClass('visually-hidden');
-    $('#agreements-tab').click();
+    $('#agreement-tab').parent().removeClass('visually-hidden');
+    $('#agreement-tab').click();
+    $('#participantAcknowledgement').removeClass('visually-hidden');
     $('#parentalConsent').removeClass('visually-hidden').addClass('visually-hidden');
     // participant phone/email are required
     $('#phoneInput').prop('required', true);
@@ -765,8 +938,9 @@ $(document).ready(function() {
 
   $('#parentSignup').on('click', function(evt) {
     // parental release should be visible
-    $('#agreements-tab').parent().removeClass('visually-hidden');
-    $('#agreements-tab').click();
+    $('#agreement-tab').parent().removeClass('visually-hidden');
+    $('#agreement-tab').click();
+    $('#participantAcknowledgement').removeClass('visually-hidden').addClass('visually-hidden');
     $('#parentalConsent').removeClass('visually-hidden');
     // participant phone/email are optional
     $('#phoneInput').prop('required', false);
@@ -776,7 +950,7 @@ $(document).ready(function() {
   });
 
   $('#cancelAgreement').on('click', function(evt) {
-    $('#agreements-tab').parent().addClass('visually-hidden');
+    $('#agreement-tab').parent().addClass('visually-hidden');
     $('#start-tab').click();
   });
 
@@ -786,7 +960,7 @@ $(document).ready(function() {
   });
 
   $('#cancelProfile').on('click', function(evt) {
-    $('#agreements-tab').parent().addClass('visually-hidden');
+    $('#agreement-tab').parent().addClass('visually-hidden');
     $('#participant-tab').parent().addClass('visually-hidden');
     $('#start-tab').click();
   });
