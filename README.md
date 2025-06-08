@@ -39,3 +39,12 @@ and PCNS (Pickleball Canada National System).
 | NCCP Number | Yes | Implied | |
 | Sport-Specific | BWF Member ID/National ID/BON Member ID | | Region |
 | Mobile Form | No | Manual Switch | Auto-Detect |
+
+## Country Codes
+
+* [GeoNames Country Codes](https://www.geonames.org/countries/)
+* [MaxMind GeoIP Countries](https://dev.maxmind.com/geoip/docs/databases/city-and-country/)
+  * [Legacy GeoIP](https://dev.maxmind.com/geoip/docs/web-services/legacy/) describes A1 (Anonymous Proxy), A2 (Satellite PRovider), EU (IP block used by multiple European countries), and AP (IP block used by multiple Asia/Pacific region countries)
+* [National Olympic Committees (NOC)](https://www.olympics.com/en/news/paris-2024-olympics-full-list-ioc-national-olympic-committee-codes)
+  * Wikipedia's [IOC Country Codes](https://en.wikipedia.org/wiki/List_of_IOC_country_codes) contains historical usage
+* Wikipedia's [Telephone Country Codes](https://en.wikipedia.org/wiki/List_of_telephone_country_codes)
