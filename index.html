@@ -447,7 +447,7 @@
           <div class="row g-3 mb-3">
             <div class="form-floating col-md-4">
               <select class="form-select" id="birthYearSelect" name="dobYear" required placeholder="YYYY">
-                <option selected disabled>Choose ...</option>
+                <option selected disabled value="">Choose ...</option>
                 <option value="2025">2025</option>
                 <option value="2024">2024</option>
                 <option value="2023">2023</option>
@@ -570,7 +570,7 @@
             </div>
             <div class="form-floating col-md-4">
               <select class="form-select" id="birthMonthSelect" name="dobMonth" required placeholder="MM">
-                <option selected disabled>Choose ...</option>
+                <option selected disabled value="">Choose ...</option>
                 <option value="1">January</option>
                 <option value="2">February</option>
                 <option value="3">March</option>
@@ -588,7 +588,7 @@
             </div>
             <div class="form-floating col-md-4">
               <select class="form-select" id="birthDaySelect" name="dobDay" required placeholder="DD">
-                <option selected disabled>Choose ...</option>
+                <option selected disabled value="">Choose ...</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -627,11 +627,10 @@
 
           <div class="row g-3 mb-3">
             <div class="col-md-6">
-              <!-- see https://github.com/twbs/bootstrap/issues/41520 for floating label anomaly -->
               <div class="input-group">
                 <div class="form-floating">
                   <select class="form-select" id="genderSelect" name="gender" required aria-label="Gender Identity" placeholder="Gender Identity">
-                    <option selected disabled>Choose ...</option>
+                    <option selected disabled value="">Choose ...</option>
                     <option value="M">Male</option>
                     <option value="F">Female</option>
                     <option value="O">Prefer to self-identify as:</option>
@@ -651,7 +650,7 @@
                   <input type="text" class="form-control" id="pronounsInput" name="pronouns" placeholder="Pronouns">
                   <label for="pronounsInput" class="form-label">Pronouns</label>
                 </div>
-                <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" href="#offcanvasPronouns" role="button" aria-controls="offcanvasPronouns"><i class="bi bi-info-circle"></i></button>
+                <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" href="#offcanvasPronouns" role="button" aria-controls="offcanvasPronouns"><i class="bi bi-info-circle"></i></button>
               </div>
             </div>
           </div>
@@ -661,7 +660,7 @@
               <div class="input-group">
                 <div class="form-floating">
                   <select class="form-select" id="indigenousPeoplesSelect" name="indigenousPeoples" placeholder="Indigenous" required>
-                    <option selected disabled>Choose ...</option>
+                    <option selected disabled value="">Choose ...</option>
                     <option value="0">No</option>
                     <option value="1">First Nations, Inuk (Inuit), Métis</option>
                     <option value="2">Ancestry but non-status</option>
@@ -669,35 +668,35 @@
                   </select>
                   <label for="indiggenousPeoplesSelect" class="form-label">Indigenous Peoples <i class="bi bi-asterisk required-field"></i></label>
                 </div>
-                <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" href="#offcanvasVoluntary" role="button" aria-controls="offcanvasVoluntary"><i class="bi bi-info-circle"></i></button>
+                <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" href="#offcanvasVoluntary" role="button" aria-controls="offcanvasVoluntary"><i class="bi bi-info-circle"></i></button>
               </div>
             </div>
             <div class="col-md-4">
               <div class="input-group">
                 <div class="form-floating">
                   <select class="form-select" id="raciliazedSelect" name="racialized" placeholder="Racialized" required>
-                    <option selected disabled>Choose ...</option>
+                    <option selected disabled value="">Choose ...</option>
                     <option value="0">No</option>
                     <option value="1">Yes</option>
                     <option value="2">Prefer not to answer</option>
                   </select>
                   <label for="racializedSelect" class="form-label">Racialized Person<i class="bi bi-asterisk required-field"></i></label>
                 </div>
-                <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" href="#offcanvasVoluntary" role="button" aria-controls="offcanvasVoluntary"><i class="bi bi-info-circle"></i></button>
+                <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" href="#offcanvasVoluntary" role="button" aria-controls="offcanvasVoluntary"><i class="bi bi-info-circle"></i></button>
               </div>
             </div>
             <div class="col-md-4">
               <div class="input-group">
                 <div class="form-floating">
                   <select class="form-select" id="disabilitySelect" name="disability" placeholder="Disability" required>
-                    <option selected disabled>Choose ...</option>
+                    <option selected disabled value="">Choose ...</option>
                     <option value="0">No</option>
                     <option value="1">Yes</option>
                     <option value="2">Prefer not to answer</option>
                   </select>
                   <label for="disabilitySelect" class="form-label">Person with a Disability<i class="bi bi-asterisk required-field"></i></label>
                 </div>
-                <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" href="#offcanvasVoluntary" role="button" aria-controls="offcanvasVoluntary"><i class="bi bi-info-circle"></i></button>
+                <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" href="#offcanvasVoluntary" role="button" aria-controls="offcanvasVoluntary"><i class="bi bi-info-circle"></i></button>
               </div>
             </div>
           </div>
@@ -717,7 +716,7 @@
               <!-- todo: data bind country selection to populate state drop-down -->
               <div class="form-floating">
                 <select class="form-select" id="stateSelect" name="state" aria-label="State" required placeholder="State">
-                  <option selected disabled>Choose ...</option>
+                  <option selected disabled value="">Choose ...</option>
                   <option value="AB">Alberta</option>
                   <option value="BC">British Columbia</option>
                   <option value="MB">Manitoba</option>
@@ -745,7 +744,7 @@
           <!-- todo: populate full list of countries -->
           <div class="form-floating mb-3">
             <select class="form-select" id="countrySelect" name="country" required aria-label="Country" placeholder="Country">
-              <option disabled>Choose ...</option>
+              <option disabled value="">Choose ...</option>
               <option selected value="CA">Canada</option>
               <option value="US">United States</option>
             </select>
