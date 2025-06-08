@@ -431,6 +431,24 @@
 
           <div class="row g-3 mb-3">
             <div class="col-md-6">
+              <div class="input-group">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="memberIdInput" name="memberId" placeholder="BON Member ID">
+                  <label for="memberIdInput" class="form-label">BON Member ID</label>
+                </div>
+                <button class="btn btn-light" type="button" id="bcanImportButton" data-bs-toggle="modal" data-bs-target="#bcanImportModal"><i class="bi bi-cloud-arrow-down"></i> Import</button>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="nccpInput" name="nccp" placeholder="NCCP #">
+                <label for="nccpInput" class="form-label">Coach NCCP Number</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
               <div class="form-floating">
                 <input type="text" class="form-control" id="participantGivenNamesInput" name="participantGivenNames" placeholder="Given Name" required>
                 <label for="participantGivenNamesInput" class="form-label">Participant's Given Name(s) <i class="bi bi-asterisk required-field"></i></label>
@@ -742,56 +760,45 @@
             </div>
           </div>
           <!-- todo: populate full list of countries -->
-          <div class="form-floating mb-3">
-            <select class="form-select" id="countrySelect" name="country" required aria-label="Country" placeholder="Country">
-              <option disabled value="">Choose ...</option>
-              <option selected value="CA">Canada</option>
-              <option value="US">United States</option>
-            </select>
-            <label for="countrySelect" class="form-label">Country <i class="bi bi-asterisk required-field"></i></label>
+          <div class="row g-3 mb-3">
+            <div class="col-md-8">
+              <div class="form-floating">
+                <select class="form-select" id="countrySelect" name="country" required aria-label="Country" placeholder="Country">
+                  <option disabled value="">Choose ...</option>
+                  <option selected value="CA">Canada</option>
+                  <option value="US">United States</option>
+                </select>
+                <label for="countrySelect" class="form-label">Country <i class="bi bi-asterisk required-field"></i></label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="input-group">
+                <span class="input-group-text" id="phoneCountryCode">+1</span>
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="phoneInput" name="phone" placeholder="416-555-1212">
+                  <label for="phoneInput" class="form-label">Phone <span class="participant-only"><i class="bi bi-asterisk required-field"></i></span></label>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="row g-3 mb-3">
-            <div class="col-md-3">
-              <div class="form-floating">
-                <input type="text" class="form-control" id="phoneInput" name="phone" placeholder="416-555-1212">
-                <label for="phoneInput" class="form-label">Phone <span class="participant-only"><i class="bi bi-asterisk required-field"></i></span></label>
-              </div>
-            </div>
-            <div class="col-md-9">
+            <div class="col-md-6">
               <div class="form-floating">
                 <input type="text" class="form-control" id="emailInput" name="email" placeholder="test@@example.com">
                 <label for="emailInput" class="form-label">Email <span class="participant-only"><i class="bi bi-asterisk required-field"></i></span></label>
               </div>
             </div>
-          </div>
-
-          <div class="row g-3 mb-3">
-            <div class="col-md-6">
+            <div class="col-md-3">
               <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" role="switch" value="1" id="newsletterCheckbox" name="newsletter" switch>
                 <label class="form-check-label" for="newsletterCheckbox">Opt-in newsletter</label>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-3">
               <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" role="switch" value="1" id="marketingCheckbox" name="marketing" switch>
                 <label class="form-check-label" for="marketingCheckbox">Opt-in email marketing</label>
-              </div>
-            </div>
-          </div>
-
-          <div class="row g-3 mb-3">
-            <div class="col-md-6">
-              <div class="form-floating">
-                <input type="text" class="form-control" id="memberIdInput" name="memberId" placeholder="BON Member ID">
-                <label for="memberIdInput" class="form-label">BON Member ID</label>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-floating">
-                <input type="text" class="form-control" id="nccpInput" name="nccp" placeholder="NCCP #">
-                <label for="nccpInput" class="form-label">Coach NCCP Number</label>
               </div>
             </div>
           </div>
@@ -905,6 +912,37 @@
     </div>
   </div>
 
+  <div class="modal fade" id="bcanImportModal" tabindex="-1" aria-labelledby="bcanImportModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="bcanImportModalLabel">Import Badminton Canada Profile</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row g-3 mb-3">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="loginNameInput" name="loginName" placeholder="Login Name">
+                <label for="loginNameInput" class="form-label">Login Name <i class="bi bi-asterisk required-field"></i></span></label>
+              </div>
+            </div>
+            <div class="row g-3 mb-3">
+              <div class="form-floating">
+                <input type="password" class="form-control" id="passwordInput" name="password" placeholder="Password">
+                <label for="passwordInput" class="form-label">Password <i class="bi bi-asterisk required-field"></i></span></label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button id="bcanButton" type="button" class="btn btn-primary">Import Profile</button>
+        </div>
+       </div>
+    </div>
+  </div>
+
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasVoluntary" aria-labelledby="Voluntary Disclosure">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="offcanvasVoluntaryLabel">Voluntary Disclosure</h5>
@@ -924,6 +962,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script>
+var bcanStatus = 0;
+
 $(document).ready(function() {
   $('#participantSignup').on('click', function(event) {
     $('#agreement-tab').parent().removeClass('visually-hidden');
@@ -959,6 +999,13 @@ $(document).ready(function() {
   $('#terms-and-conditions').on('submit', function(event) {
     $('#member-info-tab').parent().removeClass('visually-hidden');
     $('#member-info-tab').click();
+
+    if (bcanStatus == 0) {
+      bcanStatus = 1;
+
+      $('#bcanImportButton').click();
+    }
+
     event.preventDefault();
   });
 
